@@ -28,7 +28,7 @@ Admins can manage users and menu items, while regular users can browse the menu 
 
 ## Status
 
-Currently under development as a practical showcase for a job interview.
+Currently under development
 
 ---
 
