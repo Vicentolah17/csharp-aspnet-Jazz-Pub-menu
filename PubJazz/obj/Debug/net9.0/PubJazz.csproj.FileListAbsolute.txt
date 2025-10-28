@@ -410,3 +410,4 @@ C:\users\vicvi\csharp-aspnet-Jazz-Pub-menu\PubJazz\bin\Debug\net9.0\ru\Microsoft
 C:\users\vicvi\csharp-aspnet-Jazz-Pub-menu\PubJazz\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\users\vicvi\csharp-aspnet-Jazz-Pub-menu\PubJazz\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\users\vicvi\csharp-aspnet-Jazz-Pub-menu\PubJazz\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\vicvi\csharp-aspnet-Jazz-Pub-menu\PubJazz\obj\Debug\net9.0\PubJazz.sourcelink.json

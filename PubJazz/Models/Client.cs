@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace PubJazz.Models
 {
@@ -25,6 +26,7 @@ namespace PubJazz.Models
         [DisplayName ("email")]
         public string Email { get; set; } = string.Empty;
 
+        [JsonIgnore]
         public List<Premium> Premiums { get; set; } = new();
 
     }
