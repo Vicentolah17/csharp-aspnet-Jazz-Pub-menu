@@ -30,7 +30,7 @@ namespace PubJazz.Controllers
             return Ok(premiums); 
         }
 
-        // GET: /api/Premiums/5 (para pegar um só)
+        // GET: /api/Premiums/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPremium(int id)
         {
@@ -45,6 +45,81 @@ namespace PubJazz.Controllers
             return Ok(premium);
         }
 
-        // (Depois você pode adicionar [HttpPost], [HttpPut], [HttpDelete]...)
+        // POST: /api/Premiums
+        [HttpPost]
+        public async Task<IActionResult> PostPremium([FromBody] Premium premium)
+        {
+
+
+
+            premium.StartDate = DateTime.Now;
+            premium.EndDate = DateTime.Now.AddDays(7);
+
+            _context.Premiums.Add(premium);
+            await _context.SaveChangesAsync();
+
+
+            return CreatedAtAction(nameof(GetPremium), new { id = premium.Id }, premium);
+        }
+
+        // DELETE: /api/Premiums/
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeletePremium(int id)
+        {
+            var premium = await _context.Premiums.FindAsync(id);
+            if (premium == null)
+            {
+                return NotFound();
+            }
+
+            _context.Premiums.Remove(premium);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+        
+        // PUT: /api/Premiums/
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutPremium(int id, [FromBody] Premium premium)
+        {
+            
+
+            if (id != premium.Id)
+            {
+                
+                return BadRequest("ID do objeto não confere com o ID da URL.");
+            }
+
+            
+            var premiumOriginal = await _context.Premiums.FindAsync(id);
+            if (premiumOriginal == null)
+            {
+                return NotFound("Premium não encontrado.");
+            }
+
+            
+            premiumOriginal.Title = premium.Title;
+            
+
+            try
+            {
+                _context.Entry(premiumOriginal).State = EntityState.Modified; 
+                await _context.SaveChangesAsync(); 
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                
+                if (!_context.Premiums.Any(e => e.Id == id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent(); 
+        }
     }
 }
