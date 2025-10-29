@@ -1,1 +1,149 @@
-/* You can add global styles to this file, and also import other style files */
+/* Jazz pub retro color scheme - black, red, dark orange */
+:root {
+  /* Core colors */
+  --background: oklch(0.12 0.01 30);
+  --foreground: oklch(0.95 0.01 60);
+  --card: oklch(0.15 0.015 30);
+  --card-foreground: oklch(0.95 0.01 60);
+  --popover: oklch(0.15 0.015 30);
+  --popover-foreground: oklch(0.95 0.01 60);
+  --primary: oklch(0.55 0.22 25);
+  --primary-foreground: oklch(0.98 0.01 60);
+  --secondary: oklch(0.25 0.02 30);
+  --secondary-foreground: oklch(0.95 0.01 60);
+  --muted: oklch(0.22 0.015 30);
+  --muted-foreground: oklch(0.65 0.01 60);
+  --accent: oklch(0.45 0.18 35);
+  --accent-foreground: oklch(0.98 0.01 60);
+  --destructive: oklch(0.5 0.2 15);
+  --destructive-foreground: oklch(0.98 0.01 60);
+  --border: oklch(0.3 0.02 30);
+  --input: oklch(0.25 0.02 30);
+  --ring: oklch(0.55 0.22 25);
+  
+  /* Chart colors */
+  --chart-1: oklch(0.55 0.22 25);
+  --chart-2: oklch(0.45 0.18 35);
+  --chart-3: oklch(0.35 0.15 30);
+  --chart-4: oklch(0.65 0.12 40);
+  --chart-5: oklch(0.5 0.2 15);
+  
+  /* Radius */
+  --radius: 0.25rem;
+  --radius-sm: calc(0.25rem - 4px);
+  --radius-md: calc(0.25rem - 2px);
+  --radius-lg: 0.25rem;
+  --radius-xl: calc(0.25rem + 4px);
+  
+  /* Sidebar colors */
+  --sidebar: oklch(0.15 0.015 30);
+  --sidebar-foreground: oklch(0.95 0.01 60);
+  --sidebar-primary: oklch(0.55 0.22 25);
+  --sidebar-primary-foreground: oklch(0.98 0.01 60);
+  --sidebar-accent: oklch(0.25 0.02 30);
+  --sidebar-accent-foreground: oklch(0.95 0.01 60);
+  --sidebar-border: oklch(0.3 0.02 30);
+  --sidebar-ring: oklch(0.55 0.22 25);
+  
+  /* Font families */
+  --font-sans: "Playfair Display", Georgia, serif;
+  --font-mono: "Courier New", monospace;
+}
+
+/* Dark mode (caso use class="dark" no body ou html) */
+.dark {
+  --background: oklch(0.12 0.01 30);
+  --foreground: oklch(0.95 0.01 60);
+  --card: oklch(0.15 0.015 30);
+  --card-foreground: oklch(0.95 0.01 60);
+  --popover: oklch(0.15 0.015 30);
+  --popover-foreground: oklch(0.95 0.01 60);
+  --primary: oklch(0.55 0.22 25);
+  --primary-foreground: oklch(0.98 0.01 60);
+  --secondary: oklch(0.25 0.02 30);
+  --secondary-foreground: oklch(0.95 0.01 60);
+  --muted: oklch(0.22 0.015 30);
+  --muted-foreground: oklch(0.65 0.01 60);
+  --accent: oklch(0.45 0.18 35);
+  --accent-foreground: oklch(0.98 0.01 60);
+  --destructive: oklch(0.5 0.2 15);
+  --destructive-foreground: oklch(0.98 0.01 60);
+  --border: oklch(0.3 0.02 30);
+  --input: oklch(0.25 0.02 30);
+  --ring: oklch(0.55 0.22 25);
+  --chart-1: oklch(0.55 0.22 25);
+  --chart-2: oklch(0.45 0.18 35);
+  --chart-3: oklch(0.35 0.15 30);
+  --chart-4: oklch(0.65 0.12 40);
+  --chart-5: oklch(0.5 0.2 15);
+  --sidebar: oklch(0.15 0.015 30);
+  --sidebar-foreground: oklch(0.95 0.01 60);
+  --sidebar-primary: oklch(0.55 0.22 25);
+  --sidebar-primary-foreground: oklch(0.98 0.01 60);
+  --sidebar-accent: oklch(0.25 0.02 30);
+  --sidebar-accent-foreground: oklch(0.95 0.01 60);
+  --sidebar-border: oklch(0.3 0.02 30);
+  --sidebar-ring: oklch(0.55 0.22 25);
+}
+
+/* Reset e base styles */
+* {
+  border-color: var(--border);
+  outline-color: var(--ring);
+  outline-width: 2px;
+  outline-style: solid;
+  outline-offset: 2px;
+}
+
+*:not(:focus-visible) {
+  outline: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility classes para usar as cores do tema */
+.bg-background { background-color: var(--background); }
+.bg-foreground { background-color: var(--foreground); }
+.bg-card { background-color: var(--card); }
+.bg-primary { background-color: var(--primary); }
+.bg-secondary { background-color: var(--secondary); }
+.bg-muted { background-color: var(--muted); }
+.bg-accent { background-color: var(--accent); }
+.bg-destructive { background-color: var(--destructive); }
+
+.text-background { color: var(--background); }
+.text-foreground { color: var(--foreground); }
+.text-card-foreground { color: var(--card-foreground); }
+.text-primary { color: var(--primary); }
+.text-primary-foreground { color: var(--primary-foreground); }
+.text-secondary { color: var(--secondary); }
+.text-secondary-foreground { color: var(--secondary-foreground); }
+.text-muted-foreground { color: var(--muted-foreground); }
+.text-accent { color: var(--accent); }
+.text-accent-foreground { color: var(--accent-foreground); }
+.text-destructive { color: var(--destructive); }
+.text-destructive-foreground { color: var(--destructive-foreground); }
+
+.border-border { border-color: var(--border); }
+.border-input { border-color: var(--input); }
+
+.rounded-sm { border-radius: var(--radius-sm); }
+.rounded-md { border-radius: var(--radius-md); }
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-xl { border-radius: var(--radius-xl); }
+
+.font-sans { font-family: var(--font-sans); }
+.font-mono { font-family: var(--font-mono); }

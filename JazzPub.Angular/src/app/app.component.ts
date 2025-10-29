@@ -1,49 +1,52 @@
-import { Component, OnInit } from '@angular/core'; // 1. Importe OnInit
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CommonModule } from '@angular/common'; // 2. Importe CommonModule
-
-// 3. Importe o serviço e as interfaces
-import { PremiumService, Premium } from './services/premium.service'; 
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
+import { PremiumService, Premium } from './services/premium.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  
-  // 4. Adicione CommonModule aqui (para usar *ngFor)
-  imports: [RouterOutlet, CommonModule,FormsModule], 
+  imports: [RouterOutlet, CommonModule, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit { // 5. Implemente OnInit
+export class AppComponent implements OnInit {
+  public whiskeys: Premium[] = [];
   
-  // 6. Crie uma variável para guardar a lista de premiums
-  public premiums: Premium[] = [];
   public novoPremium: any = {
     title: '',
-    clientId: 1 
+    startDate: '',
+    endDate: '',
+    clientId: 1
   };
 
   public premiumParaEditar: Premium | null = null;
+  
+  // Controle do formulário
+  public mostrarFormulario: boolean = false;
+  public modoEdicao: boolean = false;
 
-  // 7. Injete o seu serviço
   constructor(private premiumService: PremiumService) {}
 
-  // 8. O ngOnInit é chamado quando o componente carrega
   ngOnInit(): void {
     this.carregarPremiums();
   }
 
-  // 9. Crie o método que chama o serviço
+  public abrirFormularioAdicionar(): void {
+    this.mostrarFormulario = true;
+    this.modoEdicao = false;
+    this.premiumParaEditar = null;
+  }
+
   public carregarPremiums(): void {
     this.premiumService.getPremiums().subscribe(
       (data: Premium[]) => {
-        
-        this.premiums = data;
-        console.log('Dados carregados!', this.premiums);
+        this.whiskeys = data;
+        console.log('Dados carregados!', this.whiskeys);
       },
       (erro) => {
-        // Deu erro!
         console.error('Erro ao buscar premiums:', erro);
       }
     );
@@ -54,70 +57,85 @@ export class AppComponent implements OnInit { // 5. Implemente OnInit
     
     this.premiumService.addPremium(this.novoPremium).subscribe(
       (premiumCriado: Premium) => {
-        
         console.log('Premium criado:', premiumCriado);
+        this.whiskeys.push(premiumCriado);
         
+        // Limpar formulário e fechar
+        this.novoPremium = {
+          title: '',
+          startDate: '',
+          endDate: '',
+          clientId: 1
+        };
+        this.fecharFormulario();
         
-        this.premiums.push(premiumCriado);
-
-        
-        this.novoPremium.title = '';
+        // Recarregar para pegar dados atualizados do servidor
+        this.carregarPremiums();
       },
       (erro) => {
         console.error('Erro ao criar premium:', erro);
+        alert('Erro ao criar premium. Verifique o console.');
       }
     );
   }
 
-  public onDelete(id: number): void {
-    if (confirm('Tem certeza que deseja deletar este item?')) {
-      this.premiumService.deletePremium(id).subscribe(
+  public deletarWhiskey(whiskey: Premium): void {
+    if (confirm(`Tem certeza que deseja deletar ${whiskey.title}?`)) {
+      this.premiumService.deletePremium(whiskey.id).subscribe(
         () => {
-          
           console.log('Premium deletado com sucesso!');
-          
-          
-          this.premiums = this.premiums.filter(p => p.id !== id);
+          this.whiskeys = this.whiskeys.filter(w => w.id !== whiskey.id);
         },
         (erro) => {
           console.error('Erro ao deletar premium:', erro);
+          alert('Erro ao deletar premium. Verifique o console.');
         }
       );
     }
   }
 
-  public onEdit(premium: Premium): void {
-    
-    this.premiumParaEditar = { ...premium }; 
+  public editarWhiskey(whiskey: Premium): void {
+    this.premiumParaEditar = { ...whiskey };
+    this.modoEdicao = true;
+    this.mostrarFormulario = true;
+    console.log('Editando whiskey:', whiskey);
   }
 
-  
-  public onCancelEdit(): void {
-    this.premiumParaEditar = null; 
-  }
-
-  
   public onUpdate(): void {
     if (this.premiumParaEditar) {
       this.premiumService.updatePremium(this.premiumParaEditar.id, this.premiumParaEditar).subscribe(
         () => {
-          
           console.log('Premium atualizado!');
-
           
-          const index = this.premiums.findIndex(p => p.id === this.premiumParaEditar!.id);
+          const index = this.whiskeys.findIndex(w => w.id === this.premiumParaEditar!.id);
           if (index !== -1) {
-            this.premiums[index] = this.premiumParaEditar!;
+            this.whiskeys[index] = this.premiumParaEditar!;
           }
           
+          this.fecharFormulario();
           
-          this.premiumParaEditar = null;
+          // Recarregar para pegar dados atualizados do servidor
+          this.carregarPremiums();
         },
         (erro) => {
           console.error('Erro ao atualizar premium:', erro);
+          alert('Erro ao atualizar premium. Verifique o console.');
         }
       );
     }
   }
 
+  public fecharFormulario(): void {
+    this.mostrarFormulario = false;
+    this.modoEdicao = false;
+    this.premiumParaEditar = null;
+    
+    // Limpar formulário
+    this.novoPremium = {
+      title: '',
+      startDate: '',
+      endDate: '',
+      clientId: 1
+    };
+  }
 }

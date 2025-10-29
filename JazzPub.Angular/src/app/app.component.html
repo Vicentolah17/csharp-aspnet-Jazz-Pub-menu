@@ -1,68 +1,197 @@
-<h1>Lista de Whiskeys (Dados da API C#)</h1>
+<div class="container">
+  <!-- header -->
+  <header class="header">
+    <h1 class="title">
+      <span class="music-note">♪</span> The Velvet Note
+    </h1>
+    <p class="subtitle">Premium Whiskey Collection</p>
+  </header>
 
-<h1>The Velvet Note - Admin</h1>
+  <!-- main -->
+  <main class="main-content">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Nossa Seleção</h2>
+        <p class="section-description">Whiskeys premium cuidadosamente selecionados</p>
+      </div>
+      <button class="btn-add" (click)="abrirFormularioAdicionar()">
+        + Adicionar Whiskey
+      </button>
+    </div>
 
-<form (ngSubmit)="onSubmit()">
-  <h3>Adicionar Novo Whiskey</h3>
-  
-  <div>
-    <label for="title">Título:</label>
-    <input 
-      type="text" 
-      id="title" 
-      name="title" 
-      [(ngModel)]="novoPremium.title"
-      required 
-    />
-  </div>
+    <!-- FORMULÁRIO ADICIONAR -->
+    <div *ngIf="mostrarFormulario && !modoEdicao" class="form-container">
+      <div class="form-header">
+        <h3>Novo Premium</h3>
+        <button class="btn-close" (click)="fecharFormulario()">✕</button>
+      </div>
+      
+      <form (ngSubmit)="onSubmit()" class="premium-form">
+        <div class="form-group">
+          <label for="title">Título *</label>
+          <input 
+            type="text" 
+            id="title" 
+            [(ngModel)]="novoPremium.title"
+            name="title"
+            placeholder="Ex: Whiskey Bourbon - Jack Daniels"
+            required>
+        </div>
 
-  <button type="submit">Adicionar</button>
-</form>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="startDate">Data Início *</label>
+            <input 
+              type="datetime-local" 
+              id="startDate" 
+              [(ngModel)]="novoPremium.startDate"
+              name="startDate"
+              required>
+          </div>
 
-<form (ngSubmit)="onUpdate()" *ngIf="premiumParaEditar">
-  <h3>Editando: {{ premiumParaEditar.title }}</h3>
-  
-  <div>
-    <label for="editTitle">Novo Título:</label>
-    <input 
-      type="text" 
-      id="editTitle" 
-      name="editTitle" 
-      [(ngModel)]="premiumParaEditar.title" 
-      required 
-    />
-  </div>
-  
-  <button type="submit">Salvar Alterações</button>
-  <button type="button" (click)="onCancelEdit()">Cancelar</button> 
-</form>
+          <div class="form-group">
+            <label for="endDate">Data Fim *</label>
+            <input 
+              type="datetime-local" 
+              id="endDate" 
+              [(ngModel)]="novoPremium.endDate"
+              name="endDate"
+              required>
+          </div>
+        </div>
 
-<hr>
+        <div class="form-group">
+          <label for="clientId">ID do Cliente *</label>
+          <input 
+            type="number" 
+            id="clientId" 
+            [(ngModel)]="novoPremium.clientId"
+            name="clientId"
+            placeholder="1"
+            required>
+        </div>
 
-<h2>Lista de Whiskeys</h2>
-<table border="1">
-  </table>
+        <div class="form-actions">
+          <button type="button" class="btn-cancel" (click)="fecharFormulario()">
+            Cancelar
+          </button>
+          <button type="submit" class="btn-submit">
+            Adicionar
+          </button>
+        </div>
+      </form>
+    </div>
 
+    <!-- FORMULÁRIO EDITAR -->
+    <div *ngIf="mostrarFormulario && modoEdicao && premiumParaEditar" class="form-container">
+      <div class="form-header">
+        <h3>Editar Premium</h3>
+        <button class="btn-close" (click)="fecharFormulario()">✕</button>
+      </div>
+      
+      <form (ngSubmit)="onUpdate()" class="premium-form">
+        <div class="form-group">
+          <label for="titleEdit">Título *</label>
+          <input 
+            type="text" 
+            id="titleEdit" 
+            [(ngModel)]="premiumParaEditar.title"
+            name="titleEdit"
+            placeholder="Ex: Whiskey Bourbon - Jack Daniels"
+            required>
+        </div>
 
-<table border="1">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Título</th>
-      <th>Cliente (Email)</th>
-      <th>Data de Início</th>
-      <th>Ações</th> </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let p of premiums">
-      <td>{{ p.id }}</td>
-      <td>{{ p.title }}</td>
-      <td>{{ p.client.email }}</td>
-      <td>{{ p.startDate | date: 'dd/MM/yyyy' }}</td>
-      <td>
-        <button (click)="onEdit(p)">Editar</button>
-        <button (click)="onDelete(p.id)">Deletar</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="startDateEdit">Data Início *</label>
+            <input 
+              type="datetime-local" 
+              id="startDateEdit" 
+              [(ngModel)]="premiumParaEditar.startDate"
+              name="startDateEdit"
+              required>
+          </div>
+
+          <div class="form-group">
+            <label for="endDateEdit">Data Fim *</label>
+            <input 
+              type="datetime-local" 
+              id="endDateEdit" 
+              [(ngModel)]="premiumParaEditar.endDate"
+              name="endDateEdit"
+              required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="clientIdEdit">ID do Cliente *</label>
+          <input 
+            type="number" 
+            id="clientIdEdit" 
+            [(ngModel)]="premiumParaEditar.clientId"
+            name="clientIdEdit"
+            placeholder="1"
+            required>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn-cancel" (click)="fecharFormulario()">
+            Cancelar
+          </button>
+          <button type="submit" class="btn-submit">
+            Atualizar
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- tabela whiskey -->
+    <div class="table-container">
+      <table class="whiskey-table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Cliente</th>
+            <th>Email</th>
+            <th>Data Início</th>
+            <th>Data Fim</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let whiskey of whiskeys">
+            <td class="whiskey-name">{{ whiskey.title }}</td>
+            <td>{{ whiskey.client?.name || 'N/A' }}</td>
+            <td class="whiskey-email">{{ whiskey.client?.email || 'N/A' }}</td>
+            <td class="whiskey-date">{{ whiskey.startDate | date:'dd/MM/yyyy HH:mm' }}</td>
+            <td class="whiskey-date">{{ whiskey.endDate | date:'dd/MM/yyyy HH:mm' }}</td>
+            <td class="actions">
+              <button class="btn-icon btn-edit" (click)="editarWhiskey(whiskey)" title="Editar">
+                <span>✏️</span>
+              </button>
+              <button class="btn-icon btn-delete" (click)="deletarWhiskey(whiskey)" title="Deletar">
+                <span>🗑️</span>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!--msg empty -->
+      <div *ngIf="whiskeys.length === 0" class="empty-state">
+        <p>Nenhum premium cadastrado ainda.</p>
+        <button class="btn-add" (click)="abrirFormularioAdicionar()">
+          + Adicionar Primeiro Premium
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- foot -->
+  <footer class="footer">
+    <p class="quote">"A música é a alma do whiskey, e o whiskey é a alma da música"</p>
+    <a href="#" class="live-jazz">
+      <span class="music-note">♪</span> Live Jazz todas as noites
+    </a>
+  </footer>
+</div>

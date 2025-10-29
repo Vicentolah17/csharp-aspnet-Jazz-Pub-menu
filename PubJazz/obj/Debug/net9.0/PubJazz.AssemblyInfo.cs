@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PubJazz")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3afcfb95dec33f884cae1085bd30aed7a37cbab4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e717c88d04a22298461a26d7bb3901a897a7052")]
 [assembly: System.Reflection.AssemblyProductAttribute("PubJazz")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PubJazz")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
