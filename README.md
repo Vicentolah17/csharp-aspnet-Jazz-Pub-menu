@@ -1,11 +1,12 @@
 # The Velvet Note - Admin Dashboard
 
-![The Velvet Note Admin Dashboard Screenshot]( <img width="1873" height="949" alt="image" src="https://github.com/user-attachments/assets/502b3918-cb6b-4fd3-9967-233b274430da" /> )
+![The Velvet Note Admin Dashboard Screenshot]  <img width="1873" height="949" alt="image" src="https://github.com/user-attachments/assets/60ef9454-3fca-41b4-815f-5b1f5ae57743" />
+
 
 
 A full-stack, single-page application (SPA) featuring a **.NET 9 API** backend and an **Angular 18** frontend. This project was built as a complete portfolio piece in a 48-hour sprint to demonstrate proficiency in a modern, decoupled tech stack.
 
-## 🚀 About This Project
+##  About This Project
 
 This project simulates a simple admin panel for "The Velvet Note," a sophisticated jazz pub. It replaces the traditional "monolithic" approach (like MVC or Razor Pages) with a modern, decoupled architecture preferred by many tech companies:
 
@@ -14,7 +15,7 @@ This project simulates a simple admin panel for "The Velvet Note," a sophisticat
 
 This monorepo contains both the frontend and backend applications, demonstrating a common development workflow.
 
-## ✨ Features
+##  Features
 
 * **Full CRUD:** Complete Create, Read, Update, and Delete functionality for the whiskey collection.
 * **Decoupled Architecture:** A C# API backend and an Angular frontend operating independently.
@@ -23,7 +24,7 @@ This monorepo contains both the frontend and backend applications, demonstrating
 * **Database Interaction:** Leverages Entity Framework Core (Code-First) with SQLite for data persistence and migrations.
 * **CORS Policy:** The backend API is configured with a proper CORS policy to securely serve data to the Angular frontend.
 
-## 💻 Tech Stack
+##  Tech Stack
 
 The technologies used align directly with modern web development standards.
 
@@ -45,7 +46,7 @@ The technologies used align directly with modern web development standards.
 * Git & GitHub
 * Visual Studio Code
 
-## ⚙️ How to Run
+##  How to Run
 
 You will need two terminals running simultaneously to run this project.
 
@@ -62,7 +63,7 @@ dotnet ef database update
 
 # Run the server (will listen on http://localhost:5095)
 dotnet run
-```
+
 # --- Open a new terminal ---
 
 # Navigate to the frontend folder
@@ -76,6 +77,7 @@ ng serve --open
 
 The application will be running live at http://localhost:4200.
 
+```
 ### Status
 V1.0 (CRUD Complete)
 
