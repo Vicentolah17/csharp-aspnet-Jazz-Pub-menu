@@ -48,7 +48,6 @@ C:\Users\09235200156\csharp-aspnet-Jazz-Pub-menu\PubJazz\bin\Debug\net10.0\appse
 C:\Users\09235200156\csharp-aspnet-Jazz-Pub-menu\PubJazz\bin\Debug\net10.0\appsettings.json
 C:\Users\09235200156\csharp-aspnet-Jazz-Pub-menu\PubJazz\bin\Debug\net10.0\PubJazz.staticwebassets.runtime.json
 C:\Users\09235200156\csharp-aspnet-Jazz-Pub-menu\PubJazz\bin\Debug\net10.0\PubJazz.staticwebassets.endpoints.json
-C:\Users\09235200156\csharp-aspnet-Jazz-Pub-menu\PubJazz\bin\Debug\net10.0\app.db
 C:\Users\09235200156\csharp-aspnet-Jazz-Pub-menu\PubJazz\bin\Debug\net10.0\PubJazz.exe
 C:\Users\09235200156\csharp-aspnet-Jazz-Pub-menu\PubJazz\bin\Debug\net10.0\PubJazz.deps.json
 C:\Users\09235200156\csharp-aspnet-Jazz-Pub-menu\PubJazz\bin\Debug\net10.0\PubJazz.runtimeconfig.json

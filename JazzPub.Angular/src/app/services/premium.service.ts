@@ -12,10 +12,11 @@ export interface Client {
 export interface Premium {
   id: number;
   title: string;
-  startDate: string; // ou Date
-  endDate: string;   // ou Date
-  clientId: number;
-  client: Client;
+  type: string;
+  origin: string;
+  age: number;
+  price: number;
+  description: string;
 }
 // ---------------------------------
 

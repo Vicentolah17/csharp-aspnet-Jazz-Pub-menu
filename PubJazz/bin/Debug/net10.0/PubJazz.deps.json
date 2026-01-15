@@ -8,12 +8,12 @@
     ".NETCoreApp,Version=v10.0": {
       "PubJazz/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "9.0.9",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.9",
-          "Microsoft.AspNetCore.Identity.UI": "9.0.9",
+          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "10.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "10.0.0",
+          "Microsoft.AspNetCore.Identity.UI": "10.0.0",
           "Microsoft.EntityFrameworkCore.Design": "10.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "10.0.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "9.0.0"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "10.0.0"
         },
         "runtime": {
           "PubJazz.dll": {}
@@ -559,33 +559,33 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/9.0.9": {
+      "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/10.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Relational": "10.0.0"
         },
         "runtime": {
-          "lib/net9.0/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll": {
-            "assemblyVersion": "9.0.9.0",
-            "fileVersion": "9.0.925.42003"
+          "lib/net10.0/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.52411"
           }
         }
       },
-      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/9.0.9": {
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/10.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Relational": "10.0.0"
         },
         "runtime": {
-          "lib/net9.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {
-            "assemblyVersion": "9.0.9.0",
-            "fileVersion": "9.0.925.42003"
+          "lib/net10.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.52411"
           }
         }
       },
-      "Microsoft.AspNetCore.Identity.UI/9.0.9": {
+      "Microsoft.AspNetCore.Identity.UI/10.0.0": {
         "runtime": {
-          "lib/net9.0/Microsoft.AspNetCore.Identity.UI.dll": {
-            "assemblyVersion": "9.0.9.0",
-            "fileVersion": "9.0.925.42003"
+          "lib/net10.0/Microsoft.AspNetCore.Identity.UI.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.52411"
           }
         }
       },
@@ -597,7 +597,7 @@
           }
         }
       },
-      "Microsoft.Build/17.10.4": {
+      "Microsoft.Build/17.11.48": {
         "dependencies": {
           "Microsoft.Build.Framework": "17.14.28",
           "Microsoft.NET.StringTools": "17.14.28",
@@ -607,7 +607,7 @@
         "runtime": {
           "lib/net8.0/Microsoft.Build.dll": {
             "assemblyVersion": "15.1.0.0",
-            "fileVersion": "17.10.4.21802"
+            "fileVersion": "17.11.48.46605"
           }
         }
       },
@@ -628,7 +628,7 @@
           "System.Configuration.ConfigurationManager": "9.0.0",
           "System.Formats.Nrbf": "9.0.0",
           "System.Resources.Extensions": "9.0.0",
-          "System.Security.Cryptography.ProtectedData": "9.0.0"
+          "System.Security.Cryptography.ProtectedData": "9.0.6"
         },
         "runtime": {
           "lib/net9.0/Microsoft.Build.Tasks.Core.dll": {
@@ -642,7 +642,7 @@
           "Microsoft.Build.Framework": "17.14.28",
           "Microsoft.NET.StringTools": "17.14.28",
           "System.Configuration.ConfigurationManager": "9.0.0",
-          "System.Security.Cryptography.ProtectedData": "9.0.0"
+          "System.Security.Cryptography.ProtectedData": "9.0.6"
         },
         "runtime": {
           "lib/net9.0/Microsoft.Build.Utilities.Core.dll": {
@@ -651,11 +651,14 @@
           }
         }
       },
-      "Microsoft.CodeAnalysis.AnalyzerUtilities/3.3.0": {
+      "Microsoft.CodeAnalysis.AnalyzerUtilities/4.14.0": {
+        "dependencies": {
+          "Microsoft.CodeAnalysis.Common": "4.14.0"
+        },
         "runtime": {
           "lib/netstandard2.0/Microsoft.CodeAnalysis.AnalyzerUtilities.dll": {
-            "assemblyVersion": "3.3.2.30504",
-            "fileVersion": "3.3.2.30504"
+            "assemblyVersion": "4.14.0.0",
+            "fileVersion": "4.1400.25.26210"
           }
         }
       },
@@ -760,59 +763,64 @@
           }
         }
       },
-      "Microsoft.CodeAnalysis.CSharp.Features/4.8.0": {
+      "Microsoft.CodeAnalysis.CSharp.Features/4.14.0": {
         "dependencies": {
           "Humanizer.Core": "2.14.1",
           "Microsoft.CodeAnalysis.CSharp": "4.14.0",
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.14.0",
           "Microsoft.CodeAnalysis.Common": "4.14.0",
-          "Microsoft.CodeAnalysis.Features": "4.8.0",
-          "Microsoft.CodeAnalysis.Workspaces.Common": "4.14.0"
+          "Microsoft.CodeAnalysis.Elfie": "1.0.0",
+          "Microsoft.CodeAnalysis.Features": "4.14.0",
+          "Microsoft.CodeAnalysis.Workspaces.Common": "4.14.0",
+          "Microsoft.DiaSymReader": "2.0.0",
+          "System.Composition": "9.0.0",
+          "System.Configuration.ConfigurationManager": "9.0.0",
+          "System.Security.Cryptography.ProtectedData": "9.0.6"
         },
         "runtime": {
-          "lib/net7.0/Microsoft.CodeAnalysis.CSharp.Features.dll": {
-            "assemblyVersion": "4.8.0.0",
-            "fileVersion": "4.800.23.55801"
+          "lib/net9.0/Microsoft.CodeAnalysis.CSharp.Features.dll": {
+            "assemblyVersion": "4.14.0.0",
+            "fileVersion": "4.1400.25.26210"
           }
         },
         "resources": {
-          "lib/net7.0/cs/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/cs/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "cs"
           },
-          "lib/net7.0/de/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/de/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "de"
           },
-          "lib/net7.0/es/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/es/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "es"
           },
-          "lib/net7.0/fr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/fr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "fr"
           },
-          "lib/net7.0/it/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/it/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "it"
           },
-          "lib/net7.0/ja/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/ja/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "ja"
           },
-          "lib/net7.0/ko/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/ko/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "ko"
           },
-          "lib/net7.0/pl/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/pl/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "pl"
           },
-          "lib/net7.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "pt-BR"
           },
-          "lib/net7.0/ru/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/ru/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "ru"
           },
-          "lib/net7.0/tr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/tr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "tr"
           },
-          "lib/net7.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "zh-Hans"
           },
-          "lib/net7.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "zh-Hant"
           }
         }
@@ -884,59 +892,63 @@
           }
         }
       },
-      "Microsoft.CodeAnalysis.Features/4.8.0": {
+      "Microsoft.CodeAnalysis.Features/4.14.0": {
         "dependencies": {
-          "Microsoft.CodeAnalysis.AnalyzerUtilities": "3.3.0",
+          "Humanizer.Core": "2.14.1",
+          "Microsoft.CodeAnalysis.AnalyzerUtilities": "4.14.0",
           "Microsoft.CodeAnalysis.Common": "4.14.0",
           "Microsoft.CodeAnalysis.Elfie": "1.0.0",
-          "Microsoft.CodeAnalysis.Scripting.Common": "4.8.0",
+          "Microsoft.CodeAnalysis.Scripting.Common": "4.14.0",
           "Microsoft.CodeAnalysis.Workspaces.Common": "4.14.0",
-          "Microsoft.DiaSymReader": "2.0.0"
+          "Microsoft.DiaSymReader": "2.0.0",
+          "System.Composition": "9.0.0",
+          "System.Configuration.ConfigurationManager": "9.0.0",
+          "System.Security.Cryptography.ProtectedData": "9.0.6"
         },
         "runtime": {
-          "lib/net7.0/Microsoft.CodeAnalysis.Features.dll": {
-            "assemblyVersion": "4.8.0.0",
-            "fileVersion": "4.800.23.55801"
+          "lib/net9.0/Microsoft.CodeAnalysis.Features.dll": {
+            "assemblyVersion": "4.14.0.0",
+            "fileVersion": "4.1400.25.26210"
           }
         },
         "resources": {
-          "lib/net7.0/cs/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/cs/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "cs"
           },
-          "lib/net7.0/de/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/de/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "de"
           },
-          "lib/net7.0/es/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/es/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "es"
           },
-          "lib/net7.0/fr/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/fr/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "fr"
           },
-          "lib/net7.0/it/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/it/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "it"
           },
-          "lib/net7.0/ja/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/ja/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "ja"
           },
-          "lib/net7.0/ko/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/ko/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "ko"
           },
-          "lib/net7.0/pl/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/pl/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "pl"
           },
-          "lib/net7.0/pt-BR/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/pt-BR/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "pt-BR"
           },
-          "lib/net7.0/ru/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/ru/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "ru"
           },
-          "lib/net7.0/tr/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/tr/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "tr"
           },
-          "lib/net7.0/zh-Hans/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/zh-Hans/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "zh-Hans"
           },
-          "lib/net7.0/zh-Hant/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/zh-Hant/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "zh-Hant"
           }
         }
@@ -954,54 +966,54 @@
           }
         }
       },
-      "Microsoft.CodeAnalysis.Scripting.Common/4.8.0": {
+      "Microsoft.CodeAnalysis.Scripting.Common/4.14.0": {
         "dependencies": {
           "Microsoft.CodeAnalysis.Common": "4.14.0"
         },
         "runtime": {
-          "lib/net7.0/Microsoft.CodeAnalysis.Scripting.dll": {
-            "assemblyVersion": "4.8.0.0",
-            "fileVersion": "4.800.23.55801"
+          "lib/net9.0/Microsoft.CodeAnalysis.Scripting.dll": {
+            "assemblyVersion": "4.14.0.0",
+            "fileVersion": "4.1400.25.26210"
           }
         },
         "resources": {
-          "lib/net7.0/cs/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/cs/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "cs"
           },
-          "lib/net7.0/de/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/de/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "de"
           },
-          "lib/net7.0/es/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/es/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "es"
           },
-          "lib/net7.0/fr/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/fr/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "fr"
           },
-          "lib/net7.0/it/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/it/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "it"
           },
-          "lib/net7.0/ja/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/ja/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "ja"
           },
-          "lib/net7.0/ko/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/ko/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "ko"
           },
-          "lib/net7.0/pl/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/pl/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "pl"
           },
-          "lib/net7.0/pt-BR/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/pt-BR/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "pt-BR"
           },
-          "lib/net7.0/ru/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/ru/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "ru"
           },
-          "lib/net7.0/tr/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/tr/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "tr"
           },
-          "lib/net7.0/zh-Hans/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/zh-Hans/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "zh-Hans"
           },
-          "lib/net7.0/zh-Hant/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/zh-Hant/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "zh-Hant"
           }
         }
@@ -1063,7 +1075,7 @@
       "Microsoft.CodeAnalysis.Workspaces.MSBuild/4.14.0": {
         "dependencies": {
           "Humanizer.Core": "2.14.1",
-          "Microsoft.Build": "17.10.4",
+          "Microsoft.Build": "17.11.48",
           "Microsoft.Build.Framework": "17.14.28",
           "Microsoft.Build.Tasks.Core": "17.14.28",
           "Microsoft.Build.Utilities.Core": "17.14.28",
@@ -1073,7 +1085,7 @@
           "System.Composition": "9.0.0",
           "System.Configuration.ConfigurationManager": "9.0.0",
           "System.Resources.Extensions": "9.0.0",
-          "System.Security.Cryptography.ProtectedData": "9.0.0",
+          "System.Security.Cryptography.ProtectedData": "9.0.6",
           "System.Security.Permissions": "9.0.0",
           "System.Windows.Extensions": "9.0.0"
         },
@@ -1148,26 +1160,26 @@
           }
         }
       },
-      "Microsoft.DotNet.Scaffolding.Shared/9.0.0": {
+      "Microsoft.DotNet.Scaffolding.Shared/10.0.0": {
         "dependencies": {
           "Humanizer": "2.14.1",
           "Microsoft.CodeAnalysis.CSharp": "4.14.0",
-          "Microsoft.CodeAnalysis.CSharp.Features": "4.8.0",
+          "Microsoft.CodeAnalysis.CSharp.Features": "4.14.0",
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.14.0",
           "Microsoft.CodeAnalysis.Common": "4.14.0",
-          "Microsoft.CodeAnalysis.Features": "4.8.0",
+          "Microsoft.CodeAnalysis.Features": "4.14.0",
           "Microsoft.CodeAnalysis.Workspaces.Common": "4.14.0",
           "Microsoft.Extensions.DependencyModel": "10.0.0",
           "Mono.TextTemplating": "3.0.0",
           "Newtonsoft.Json": "13.0.3",
-          "NuGet.Packaging": "6.11.0",
-          "NuGet.ProjectModel": "6.11.0",
-          "System.Security.Cryptography.ProtectedData": "9.0.0"
+          "NuGet.Packaging": "6.12.1",
+          "NuGet.ProjectModel": "6.12.1",
+          "System.Security.Cryptography.ProtectedData": "9.0.6"
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.DotNet.Scaffolding.Shared.dll": {
-            "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.55703"
+          "lib/net9.0/Microsoft.DotNet.Scaffolding.Shared.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.60806"
           }
         }
       },
@@ -1260,193 +1272,213 @@
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration/9.0.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration/10.0.0": {
         "dependencies": {
           "Humanizer": "2.14.1",
           "Microsoft.AspNetCore.Razor.Language": "6.0.24",
-          "Microsoft.Build": "17.10.4",
+          "Microsoft.Build": "17.11.48",
+          "Microsoft.Build.Tasks.Core": "17.14.28",
+          "Microsoft.Build.Utilities.Core": "17.14.28",
           "Microsoft.CodeAnalysis.CSharp": "4.14.0",
-          "Microsoft.CodeAnalysis.CSharp.Features": "4.8.0",
+          "Microsoft.CodeAnalysis.CSharp.Features": "4.14.0",
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.14.0",
           "Microsoft.CodeAnalysis.Common": "4.14.0",
-          "Microsoft.CodeAnalysis.Features": "4.8.0",
+          "Microsoft.CodeAnalysis.Features": "4.14.0",
           "Microsoft.CodeAnalysis.Razor": "6.0.24",
           "Microsoft.CodeAnalysis.Workspaces.Common": "4.14.0",
+          "Microsoft.CodeAnalysis.Workspaces.MSBuild": "4.14.0",
+          "Microsoft.EntityFrameworkCore": "10.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "10.0.0",
           "Microsoft.Extensions.DependencyModel": "10.0.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "9.0.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "10.0.0",
           "Mono.TextTemplating": "3.0.0",
           "Newtonsoft.Json": "13.0.3",
-          "NuGet.Packaging": "6.11.0",
-          "NuGet.ProjectModel": "6.11.0",
-          "System.Security.Cryptography.ProtectedData": "9.0.0"
+          "NuGet.Packaging": "6.12.1",
+          "NuGet.ProjectModel": "6.12.1",
+          "System.Security.Cryptography.ProtectedData": "9.0.6"
         },
         "runtime": {
-          "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.dll": {
-            "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.55703"
+          "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.60806"
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Core/9.0.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Core/10.0.0": {
         "dependencies": {
           "Humanizer": "2.14.1",
           "Microsoft.AspNetCore.Razor.Language": "6.0.24",
-          "Microsoft.Build": "17.10.4",
+          "Microsoft.Build": "17.11.48",
           "Microsoft.CodeAnalysis.CSharp": "4.14.0",
-          "Microsoft.CodeAnalysis.CSharp.Features": "4.8.0",
+          "Microsoft.CodeAnalysis.CSharp.Features": "4.14.0",
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.14.0",
           "Microsoft.CodeAnalysis.Common": "4.14.0",
-          "Microsoft.CodeAnalysis.Features": "4.8.0",
+          "Microsoft.CodeAnalysis.Features": "4.14.0",
           "Microsoft.CodeAnalysis.Razor": "6.0.24",
           "Microsoft.CodeAnalysis.Workspaces.Common": "4.14.0",
           "Microsoft.Extensions.DependencyModel": "10.0.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "9.0.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "10.0.0",
           "Mono.TextTemplating": "3.0.0",
           "Newtonsoft.Json": "13.0.3",
-          "NuGet.Packaging": "6.11.0",
-          "NuGet.ProjectModel": "6.11.0",
-          "System.Security.Cryptography.ProtectedData": "9.0.0"
+          "NuGet.Packaging": "6.12.1",
+          "NuGet.ProjectModel": "6.12.1",
+          "System.Security.Cryptography.ProtectedData": "9.0.6"
         },
         "runtime": {
-          "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll": {
-            "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.55703"
+          "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.60806"
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design/9.0.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design/10.0.0": {
         "dependencies": {
           "Humanizer": "2.14.1",
           "Microsoft.AspNetCore.Razor.Language": "6.0.24",
-          "Microsoft.Build": "17.10.4",
+          "Microsoft.Build": "17.11.48",
+          "Microsoft.Build.Tasks.Core": "17.14.28",
+          "Microsoft.Build.Utilities.Core": "17.14.28",
           "Microsoft.CodeAnalysis.CSharp": "4.14.0",
-          "Microsoft.CodeAnalysis.CSharp.Features": "4.8.0",
+          "Microsoft.CodeAnalysis.CSharp.Features": "4.14.0",
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.14.0",
           "Microsoft.CodeAnalysis.Common": "4.14.0",
-          "Microsoft.CodeAnalysis.Features": "4.8.0",
+          "Microsoft.CodeAnalysis.Features": "4.14.0",
           "Microsoft.CodeAnalysis.Razor": "6.0.24",
           "Microsoft.CodeAnalysis.Workspaces.Common": "4.14.0",
-          "Microsoft.DotNet.Scaffolding.Shared": "9.0.0",
+          "Microsoft.CodeAnalysis.Workspaces.MSBuild": "4.14.0",
+          "Microsoft.DotNet.Scaffolding.Shared": "10.0.0",
+          "Microsoft.EntityFrameworkCore": "10.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "10.0.0",
           "Microsoft.Extensions.DependencyModel": "10.0.0",
-          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "9.0.0",
+          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "10.0.0",
           "Mono.TextTemplating": "3.0.0",
           "Newtonsoft.Json": "13.0.3",
-          "NuGet.Packaging": "6.11.0",
-          "NuGet.ProjectModel": "6.11.0",
-          "System.Security.Cryptography.ProtectedData": "9.0.0"
+          "NuGet.Packaging": "6.12.1",
+          "NuGet.ProjectModel": "6.12.1",
+          "System.Security.Cryptography.ProtectedData": "9.0.6"
         },
         "runtime": {
-          "lib/net8.0/dotnet-aspnet-codegenerator-design.dll": {
-            "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.55703"
+          "lib/net10.0/dotnet-aspnet-codegenerator-design.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.60806"
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/9.0.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/10.0.0": {
         "dependencies": {
           "Humanizer": "2.14.1",
           "Microsoft.AspNetCore.Razor.Language": "6.0.24",
-          "Microsoft.Build": "17.10.4",
+          "Microsoft.Build": "17.11.48",
+          "Microsoft.Build.Tasks.Core": "17.14.28",
+          "Microsoft.Build.Utilities.Core": "17.14.28",
           "Microsoft.CodeAnalysis.CSharp": "4.14.0",
-          "Microsoft.CodeAnalysis.CSharp.Features": "4.8.0",
+          "Microsoft.CodeAnalysis.CSharp.Features": "4.14.0",
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.14.0",
           "Microsoft.CodeAnalysis.Common": "4.14.0",
-          "Microsoft.CodeAnalysis.Features": "4.8.0",
+          "Microsoft.CodeAnalysis.Features": "4.14.0",
           "Microsoft.CodeAnalysis.Razor": "6.0.24",
           "Microsoft.CodeAnalysis.Workspaces.Common": "4.14.0",
-          "Microsoft.DotNet.Scaffolding.Shared": "9.0.0",
+          "Microsoft.CodeAnalysis.Workspaces.MSBuild": "4.14.0",
+          "Microsoft.DotNet.Scaffolding.Shared": "10.0.0",
+          "Microsoft.EntityFrameworkCore": "10.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "10.0.0",
           "Microsoft.Extensions.DependencyModel": "10.0.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "9.0.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "10.0.0",
           "Mono.TextTemplating": "3.0.0",
           "Newtonsoft.Json": "13.0.3",
-          "NuGet.Packaging": "6.11.0",
-          "NuGet.ProjectModel": "6.11.0",
-          "System.Security.Cryptography.ProtectedData": "9.0.0"
+          "NuGet.Packaging": "6.12.1",
+          "NuGet.ProjectModel": "6.12.1",
+          "System.Security.Cryptography.ProtectedData": "9.0.6"
         },
         "runtime": {
-          "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll": {
-            "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.55703"
+          "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.60806"
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/9.0.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/10.0.0": {
         "dependencies": {
           "Humanizer": "2.14.1",
           "Microsoft.AspNetCore.Razor.Language": "6.0.24",
-          "Microsoft.Build": "17.10.4",
+          "Microsoft.Build": "17.11.48",
           "Microsoft.CodeAnalysis.CSharp": "4.14.0",
-          "Microsoft.CodeAnalysis.CSharp.Features": "4.8.0",
+          "Microsoft.CodeAnalysis.CSharp.Features": "4.14.0",
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.14.0",
           "Microsoft.CodeAnalysis.Common": "4.14.0",
-          "Microsoft.CodeAnalysis.Features": "4.8.0",
+          "Microsoft.CodeAnalysis.Features": "4.14.0",
           "Microsoft.CodeAnalysis.Razor": "6.0.24",
           "Microsoft.CodeAnalysis.Workspaces.Common": "4.14.0",
           "Microsoft.Extensions.DependencyModel": "10.0.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "9.0.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "10.0.0",
           "Mono.TextTemplating": "3.0.0",
           "Newtonsoft.Json": "13.0.3",
-          "NuGet.Packaging": "6.11.0",
-          "NuGet.ProjectModel": "6.11.0",
-          "System.Security.Cryptography.ProtectedData": "9.0.0"
+          "NuGet.Packaging": "6.12.1",
+          "NuGet.ProjectModel": "6.12.1",
+          "System.Security.Cryptography.ProtectedData": "9.0.6"
         },
         "runtime": {
-          "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll": {
-            "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.55703"
+          "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.60806"
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/9.0.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/10.0.0": {
         "dependencies": {
           "Humanizer": "2.14.1",
-          "Microsoft.Build": "17.10.4",
+          "Microsoft.Build": "17.11.48",
           "Microsoft.CodeAnalysis.CSharp": "4.14.0",
-          "Microsoft.CodeAnalysis.CSharp.Features": "4.8.0",
+          "Microsoft.CodeAnalysis.CSharp.Features": "4.14.0",
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.14.0",
           "Microsoft.CodeAnalysis.Common": "4.14.0",
-          "Microsoft.CodeAnalysis.Features": "4.8.0",
+          "Microsoft.CodeAnalysis.Features": "4.14.0",
           "Microsoft.CodeAnalysis.Workspaces.Common": "4.14.0",
-          "Microsoft.DotNet.Scaffolding.Shared": "9.0.0",
+          "Microsoft.DotNet.Scaffolding.Shared": "10.0.0",
           "Microsoft.Extensions.DependencyModel": "10.0.0",
           "Mono.TextTemplating": "3.0.0",
           "Newtonsoft.Json": "13.0.3",
-          "NuGet.Packaging": "6.11.0",
-          "NuGet.ProjectModel": "6.11.0",
-          "System.Security.Cryptography.ProtectedData": "9.0.0"
+          "NuGet.Packaging": "6.12.1",
+          "NuGet.ProjectModel": "6.12.1",
+          "System.Security.Cryptography.ProtectedData": "9.0.6"
         },
         "runtime": {
-          "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll": {
-            "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.55703"
+          "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.60806"
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/9.0.0": {
+      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/10.0.0": {
         "dependencies": {
           "Humanizer": "2.14.1",
           "Microsoft.AspNetCore.Razor.Language": "6.0.24",
-          "Microsoft.Build": "17.10.4",
+          "Microsoft.Build": "17.11.48",
+          "Microsoft.Build.Tasks.Core": "17.14.28",
+          "Microsoft.Build.Utilities.Core": "17.14.28",
           "Microsoft.CodeAnalysis.CSharp": "4.14.0",
-          "Microsoft.CodeAnalysis.CSharp.Features": "4.8.0",
+          "Microsoft.CodeAnalysis.CSharp.Features": "4.14.0",
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.14.0",
           "Microsoft.CodeAnalysis.Common": "4.14.0",
-          "Microsoft.CodeAnalysis.Features": "4.8.0",
+          "Microsoft.CodeAnalysis.Features": "4.14.0",
           "Microsoft.CodeAnalysis.Razor": "6.0.24",
           "Microsoft.CodeAnalysis.Workspaces.Common": "4.14.0",
-          "Microsoft.DotNet.Scaffolding.Shared": "9.0.0",
+          "Microsoft.CodeAnalysis.Workspaces.MSBuild": "4.14.0",
+          "Microsoft.DotNet.Scaffolding.Shared": "10.0.0",
+          "Microsoft.EntityFrameworkCore": "10.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "10.0.0",
           "Microsoft.Extensions.DependencyModel": "10.0.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration": "9.0.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration": "10.0.0",
           "Mono.TextTemplating": "3.0.0",
           "Newtonsoft.Json": "13.0.3",
-          "NuGet.Packaging": "6.11.0",
-          "NuGet.ProjectModel": "6.11.0",
-          "System.Security.Cryptography.ProtectedData": "9.0.0"
+          "NuGet.Packaging": "6.12.1",
+          "NuGet.ProjectModel": "6.12.1",
+          "System.Security.Cryptography.ProtectedData": "9.0.6"
         },
         "runtime": {
-          "lib/net8.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {
-            "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.55703"
+          "lib/net10.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.60806"
           }
         }
       },
@@ -1469,102 +1501,102 @@
           }
         }
       },
-      "NuGet.Common/6.11.0": {
+      "NuGet.Common/6.12.1": {
         "dependencies": {
-          "NuGet.Frameworks": "6.11.0"
+          "NuGet.Frameworks": "6.12.1"
         },
         "runtime": {
           "lib/netstandard2.0/NuGet.Common.dll": {
-            "assemblyVersion": "6.11.0.119",
-            "fileVersion": "6.11.0.119"
+            "assemblyVersion": "6.12.1.1",
+            "fileVersion": "6.12.1.1"
           }
         }
       },
-      "NuGet.Configuration/6.11.0": {
+      "NuGet.Configuration/6.12.1": {
         "dependencies": {
-          "NuGet.Common": "6.11.0",
-          "System.Security.Cryptography.ProtectedData": "9.0.0"
+          "NuGet.Common": "6.12.1",
+          "System.Security.Cryptography.ProtectedData": "9.0.6"
         },
         "runtime": {
           "lib/netstandard2.0/NuGet.Configuration.dll": {
-            "assemblyVersion": "6.11.0.119",
-            "fileVersion": "6.11.0.119"
+            "assemblyVersion": "6.12.1.1",
+            "fileVersion": "6.12.1.1"
           }
         }
       },
-      "NuGet.DependencyResolver.Core/6.11.0": {
+      "NuGet.DependencyResolver.Core/6.12.1": {
         "dependencies": {
-          "NuGet.Configuration": "6.11.0",
-          "NuGet.LibraryModel": "6.11.0",
-          "NuGet.Protocol": "6.11.0"
+          "NuGet.Configuration": "6.12.1",
+          "NuGet.LibraryModel": "6.12.1",
+          "NuGet.Protocol": "6.12.1"
         },
         "runtime": {
           "lib/net5.0/NuGet.DependencyResolver.Core.dll": {
-            "assemblyVersion": "6.11.0.119",
-            "fileVersion": "6.11.0.119"
+            "assemblyVersion": "6.12.1.1",
+            "fileVersion": "6.12.1.1"
           }
         }
       },
-      "NuGet.Frameworks/6.11.0": {
+      "NuGet.Frameworks/6.12.1": {
         "runtime": {
           "lib/netstandard2.0/NuGet.Frameworks.dll": {
-            "assemblyVersion": "6.11.0.119",
-            "fileVersion": "6.11.0.119"
+            "assemblyVersion": "6.12.1.1",
+            "fileVersion": "6.12.1.1"
           }
         }
       },
-      "NuGet.LibraryModel/6.11.0": {
+      "NuGet.LibraryModel/6.12.1": {
         "dependencies": {
-          "NuGet.Common": "6.11.0",
-          "NuGet.Versioning": "6.11.0"
+          "NuGet.Common": "6.12.1",
+          "NuGet.Versioning": "6.12.1"
         },
         "runtime": {
           "lib/netstandard2.0/NuGet.LibraryModel.dll": {
-            "assemblyVersion": "6.11.0.119",
-            "fileVersion": "6.11.0.119"
+            "assemblyVersion": "6.12.1.1",
+            "fileVersion": "6.12.1.1"
           }
         }
       },
-      "NuGet.Packaging/6.11.0": {
+      "NuGet.Packaging/6.12.1": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.3",
-          "NuGet.Configuration": "6.11.0",
-          "NuGet.Versioning": "6.11.0"
+          "NuGet.Configuration": "6.12.1",
+          "NuGet.Versioning": "6.12.1"
         },
         "runtime": {
           "lib/net5.0/NuGet.Packaging.dll": {
-            "assemblyVersion": "6.11.0.119",
-            "fileVersion": "6.11.0.119"
+            "assemblyVersion": "6.12.1.1",
+            "fileVersion": "6.12.1.1"
           }
         }
       },
-      "NuGet.ProjectModel/6.11.0": {
+      "NuGet.ProjectModel/6.12.1": {
         "dependencies": {
-          "NuGet.DependencyResolver.Core": "6.11.0"
+          "NuGet.DependencyResolver.Core": "6.12.1"
         },
         "runtime": {
           "lib/net5.0/NuGet.ProjectModel.dll": {
-            "assemblyVersion": "6.11.0.119",
-            "fileVersion": "6.11.0.119"
+            "assemblyVersion": "6.12.1.1",
+            "fileVersion": "6.12.1.1"
           }
         }
       },
-      "NuGet.Protocol/6.11.0": {
+      "NuGet.Protocol/6.12.1": {
         "dependencies": {
-          "NuGet.Packaging": "6.11.0"
+          "NuGet.Packaging": "6.12.1"
         },
         "runtime": {
           "lib/net5.0/NuGet.Protocol.dll": {
-            "assemblyVersion": "6.11.0.119",
-            "fileVersion": "6.11.0.119"
+            "assemblyVersion": "6.12.1.1",
+            "fileVersion": "6.12.1.1"
           }
         }
       },
-      "NuGet.Versioning/6.11.0": {
+      "NuGet.Versioning/6.12.1": {
         "runtime": {
           "lib/netstandard2.0/NuGet.Versioning.dll": {
-            "assemblyVersion": "6.11.0.119",
-            "fileVersion": "6.11.0.119"
+            "assemblyVersion": "6.12.1.1",
+            "fileVersion": "6.12.1.1"
           }
         }
       },
@@ -1788,7 +1820,7 @@
       },
       "System.Configuration.ConfigurationManager/9.0.0": {
         "dependencies": {
-          "System.Security.Cryptography.ProtectedData": "9.0.0"
+          "System.Security.Cryptography.ProtectedData": "9.0.6"
         },
         "runtime": {
           "lib/net9.0/System.Configuration.ConfigurationManager.dll": {
@@ -1824,11 +1856,11 @@
           }
         }
       },
-      "System.Security.Cryptography.ProtectedData/9.0.0": {
+      "System.Security.Cryptography.ProtectedData/9.0.6": {
         "runtime": {
           "lib/net9.0/System.Security.Cryptography.ProtectedData.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.52809"
+            "fileVersion": "9.0.625.26613"
           }
         }
       },
@@ -2217,26 +2249,26 @@
       "path": "humanizer.core.zh-hant/2.14.1",
       "hashPath": "humanizer.core.zh-hant.2.14.1.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/9.0.9": {
+    "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/10.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ClnQ7NYH6glI4B8b91qiu0vN+5cuMrltpJJoJQmD9LPNMMTinkqmzEyFBce8r7Y68dEWiq14CBGYdr91++z+NQ==",
-      "path": "microsoft.aspnetcore.diagnostics.entityframeworkcore/9.0.9",
-      "hashPath": "microsoft.aspnetcore.diagnostics.entityframeworkcore.9.0.9.nupkg.sha512"
+      "sha512": "sha512-+G3o7pCNNqtuQMtO2Sxdng18Wc0RjQmbNG41GUQUM3rMjytPv59p2/9gCA+iHs2juG8/a6q7uxq8OH8WaVAk6Q==",
+      "path": "microsoft.aspnetcore.diagnostics.entityframeworkcore/10.0.0",
+      "hashPath": "microsoft.aspnetcore.diagnostics.entityframeworkcore.10.0.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Identity.EntityFrameworkCore/9.0.9": {
+    "Microsoft.AspNetCore.Identity.EntityFrameworkCore/10.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-dks8XEL1RFT8BmytQCKq0ovWwOUb8cVImdCA1fH8+SQoMxU2HvtyG6KNeQfKAudny2YQjl8H812pkvdw6rEqdg==",
-      "path": "microsoft.aspnetcore.identity.entityframeworkcore/9.0.9",
-      "hashPath": "microsoft.aspnetcore.identity.entityframeworkcore.9.0.9.nupkg.sha512"
+      "sha512": "sha512-mH1+58nbX5RWSd8hajSnXSdpQ1MN3oca488Zd+DvKX2nPTAyTVNRzubMV06BmPcjOZ9waLr/AjwcNiCQ8bCscQ==",
+      "path": "microsoft.aspnetcore.identity.entityframeworkcore/10.0.0",
+      "hashPath": "microsoft.aspnetcore.identity.entityframeworkcore.10.0.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Identity.UI/9.0.9": {
+    "Microsoft.AspNetCore.Identity.UI/10.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-XfNdgEDatFIlrui4LWmTnBGIy5RQ8b2ZTj14qklgAgKvYIch5VlaiT0l50xF3SIAIEzJBFeJ7EJqASzHFX4uzQ==",
-      "path": "microsoft.aspnetcore.identity.ui/9.0.9",
-      "hashPath": "microsoft.aspnetcore.identity.ui.9.0.9.nupkg.sha512"
+      "sha512": "sha512-DvqmVNTJq2PWSUi5NfV8zAd9sFrfSuq0cifaj6YHaunQMeWMoCjhC2ChFRuIUs5ZiIFOEg2gmSeke2OES7RAwA==",
+      "path": "microsoft.aspnetcore.identity.ui/10.0.0",
+      "hashPath": "microsoft.aspnetcore.identity.ui.10.0.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Razor.Language/6.0.24": {
       "type": "package",
@@ -2245,12 +2277,12 @@
       "path": "microsoft.aspnetcore.razor.language/6.0.24",
       "hashPath": "microsoft.aspnetcore.razor.language.6.0.24.nupkg.sha512"
     },
-    "Microsoft.Build/17.10.4": {
+    "Microsoft.Build/17.11.48": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ZmGA8vhVXFzC4oo48ybQKlEybVKd0Ntfdr+Enqrn5ES1R6e/krIK9hLk0W33xuT0/G6QYd3YdhJZh+Xle717Ag==",
-      "path": "microsoft.build/17.10.4",
-      "hashPath": "microsoft.build.17.10.4.nupkg.sha512"
+      "sha512": "sha512-g8Kn575mNAKcuFotV3C7xvF+IbxuHennl67LH2shL2au1U6UqwReTDygCHyU04+koc2Yn7fHIbVQaC08HqEWow==",
+      "path": "microsoft.build/17.11.48",
+      "hashPath": "microsoft.build.17.11.48.nupkg.sha512"
     },
     "Microsoft.Build.Framework/17.14.28": {
       "type": "package",
@@ -2273,12 +2305,12 @@
       "path": "microsoft.build.utilities.core/17.14.28",
       "hashPath": "microsoft.build.utilities.core.17.14.28.nupkg.sha512"
     },
-    "Microsoft.CodeAnalysis.AnalyzerUtilities/3.3.0": {
+    "Microsoft.CodeAnalysis.AnalyzerUtilities/4.14.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-gyQ70pJ4T7hu/s0+QnEaXtYfeG/JrttGnxHJlrhpxsQjRIUGuRhVwNBtkHHYOrUAZ/l47L98/NiJX6QmTwAyrg==",
-      "path": "microsoft.codeanalysis.analyzerutilities/3.3.0",
-      "hashPath": "microsoft.codeanalysis.analyzerutilities.3.3.0.nupkg.sha512"
+      "sha512": "sha512-Tyfyuz6l+Ifmg7oiv86jpUg1CjqDMUGNJm1psnMkN1CCeXREPP/A9XafSGDRGoJ+gnI9a3Lk/1efvRspMdZOiQ==",
+      "path": "microsoft.codeanalysis.analyzerutilities/4.14.0",
+      "hashPath": "microsoft.codeanalysis.analyzerutilities.4.14.0.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.Common/4.14.0": {
       "type": "package",
@@ -2294,12 +2326,12 @@
       "path": "microsoft.codeanalysis.csharp/4.14.0",
       "hashPath": "microsoft.codeanalysis.csharp.4.14.0.nupkg.sha512"
     },
-    "Microsoft.CodeAnalysis.CSharp.Features/4.8.0": {
+    "Microsoft.CodeAnalysis.CSharp.Features/4.14.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Gpas3l8PE1xz1VDIJNMkYuoFPXtuALxybP04caXh9avC2a0elsoBdukndkJXVZgdKPwraf0a98s7tjqnEk5QIQ==",
-      "path": "microsoft.codeanalysis.csharp.features/4.8.0",
-      "hashPath": "microsoft.codeanalysis.csharp.features.4.8.0.nupkg.sha512"
+      "sha512": "sha512-JYOIwYcc7xkvG2ElgyVm1lRsgJlPNnP7k45xmfGfI+5T5eajEYUQU75kq8xB4bqjjX7ux8AZr330OvrVv5ZvrA==",
+      "path": "microsoft.codeanalysis.csharp.features/4.14.0",
+      "hashPath": "microsoft.codeanalysis.csharp.features.4.14.0.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/4.14.0": {
       "type": "package",
@@ -2315,12 +2347,12 @@
       "path": "microsoft.codeanalysis.elfie/1.0.0",
       "hashPath": "microsoft.codeanalysis.elfie.1.0.0.nupkg.sha512"
     },
-    "Microsoft.CodeAnalysis.Features/4.8.0": {
+    "Microsoft.CodeAnalysis.Features/4.14.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-sCVzMtSETGE16KeScwwlVfxaKRbUMSf/cgRPRPMJuou37SLT7XkIBzJu4e7mlFTzpJbfalV5tOcKpUtLO3eJAg==",
-      "path": "microsoft.codeanalysis.features/4.8.0",
-      "hashPath": "microsoft.codeanalysis.features.4.8.0.nupkg.sha512"
+      "sha512": "sha512-UHQfGmj7/9HjD8hKndFKtyg4SYocz8+6ZFtEjx9xT8+C3wuRcEMobGanJvmp6L8quuB0nNVZR0QEsK5IkSXnlQ==",
+      "path": "microsoft.codeanalysis.features/4.14.0",
+      "hashPath": "microsoft.codeanalysis.features.4.14.0.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.Razor/6.0.24": {
       "type": "package",
@@ -2329,12 +2361,12 @@
       "path": "microsoft.codeanalysis.razor/6.0.24",
       "hashPath": "microsoft.codeanalysis.razor.6.0.24.nupkg.sha512"
     },
-    "Microsoft.CodeAnalysis.Scripting.Common/4.8.0": {
+    "Microsoft.CodeAnalysis.Scripting.Common/4.14.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ysiNNbAASVhV9wEd5oY2x99EwaVYtB13XZRjHsgWT/R1mQkxZF8jWsf7JWaZxD1+jNoz1QCQ6nbe+vr+6QvlFA==",
-      "path": "microsoft.codeanalysis.scripting.common/4.8.0",
-      "hashPath": "microsoft.codeanalysis.scripting.common.4.8.0.nupkg.sha512"
+      "sha512": "sha512-YRFoYZQU4VPlB+Xwwtj8gIHXxMyuhGXyj207IWHcsSNaJtW83My0FGv6jtN9gC/HkxgjdMYJORPjBwUx3+FVjQ==",
+      "path": "microsoft.codeanalysis.scripting.common/4.14.0",
+      "hashPath": "microsoft.codeanalysis.scripting.common.4.14.0.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.Workspaces.Common/4.14.0": {
       "type": "package",
@@ -2364,12 +2396,12 @@
       "path": "microsoft.diasymreader/2.0.0",
       "hashPath": "microsoft.diasymreader.2.0.0.nupkg.sha512"
     },
-    "Microsoft.DotNet.Scaffolding.Shared/9.0.0": {
+    "Microsoft.DotNet.Scaffolding.Shared/10.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-9pfRsTzUANgI6J7nFjYip50ifcvmORjMmFByXmdYa//x8toziydhbg0cMylP1S2mRf4/96VKSAfpayYrO3m4Ww==",
-      "path": "microsoft.dotnet.scaffolding.shared/9.0.0",
-      "hashPath": "microsoft.dotnet.scaffolding.shared.9.0.0.nupkg.sha512"
+      "sha512": "sha512-bvbhe5eZu8Ov2vxwNc8+XimXf0M2z79jrfCmtvTS77HRPnGC7dcGkHqdaJIHv1bmMHX+VJH1axlYmVwkF12JvA==",
+      "path": "microsoft.dotnet.scaffolding.shared/10.0.0",
+      "hashPath": "microsoft.dotnet.scaffolding.shared.10.0.0.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore/10.0.0": {
       "type": "package",
@@ -2427,54 +2459,54 @@
       "path": "microsoft.net.stringtools/17.14.28",
       "hashPath": "microsoft.net.stringtools.17.14.28.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration/9.0.0": {
+    "Microsoft.VisualStudio.Web.CodeGeneration/10.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-W9ho78o/92MUDz04r7Al4dMx7djaqtSJE1cR7fMjy+Mm0StL5pVKXF24qnAFWJlip7KEpAa1QP35davXvuis9w==",
-      "path": "microsoft.visualstudio.web.codegeneration/9.0.0",
-      "hashPath": "microsoft.visualstudio.web.codegeneration.9.0.0.nupkg.sha512"
+      "sha512": "sha512-g6lTQP0hlzeyts5REYJ8sYhU4m9iEk3rK1i9Kk4DHanio2EuUtRxJQDUljTOJdESGBE/iofECWozG7ucBSLjSQ==",
+      "path": "microsoft.visualstudio.web.codegeneration/10.0.0",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.10.0.0.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Core/9.0.0": {
+    "Microsoft.VisualStudio.Web.CodeGeneration.Core/10.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-1VIEZs8DNnefMa0eVDZucz/dk28Sg0QRiNiRJj7SdU8E6UiNJxnkzA748aqA6Qqi8OMTHTBKhzx0Hj9ykIi6/Q==",
-      "path": "microsoft.visualstudio.web.codegeneration.core/9.0.0",
-      "hashPath": "microsoft.visualstudio.web.codegeneration.core.9.0.0.nupkg.sha512"
+      "sha512": "sha512-UeS+tMVowP7pPQC6kNUGm7bUoj9ojqyU0XIlsA1C0f24xN6iNs7h5btWAkCeQb9sl/RRmGWibKixL/r66ZSz2w==",
+      "path": "microsoft.visualstudio.web.codegeneration.core/10.0.0",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.core.10.0.0.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Design/9.0.0": {
+    "Microsoft.VisualStudio.Web.CodeGeneration.Design/10.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-nO5MUL3iC0WjtAVea5d4v6kVcoL9ae/PnkC6NeEJhWazHKdKj7xfv6D2QvBx8uCIj8FUu9QpvvdN6m/xMp//EQ==",
-      "path": "microsoft.visualstudio.web.codegeneration.design/9.0.0",
-      "hashPath": "microsoft.visualstudio.web.codegeneration.design.9.0.0.nupkg.sha512"
+      "sha512": "sha512-o/mBDSymoew2WfG1oOUtcy2k57YknJAudH4JRey0qcAj4fTm4+SkUBDhruWppGuwf0yeZuwzfkpDD2L6qbbjjw==",
+      "path": "microsoft.visualstudio.web.codegeneration.design/10.0.0",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.design.10.0.0.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/9.0.0": {
+    "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/10.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-F4+A6CaXmof/QoeWpqaMMeoVinfUSIMKa5xLOrwsZxGfYl6Qryhb06bkJ8yJaF05WefMM/wnj73oI3Ms2bBh7g==",
-      "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/9.0.0",
-      "hashPath": "microsoft.visualstudio.web.codegeneration.entityframeworkcore.9.0.0.nupkg.sha512"
+      "sha512": "sha512-taGJ3U1UnP5mjpB1h5+ktoXH2KJXEj/j8M+L+e5+P1dqeIt37n75ZO+HlE7YzpGwneETJwMfVtQBWkkOmtnXZA==",
+      "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/10.0.0",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.entityframeworkcore.10.0.0.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Templating/9.0.0": {
+    "Microsoft.VisualStudio.Web.CodeGeneration.Templating/10.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-euoX0M4JnbzSUcFXfDq+GSSdXNRbKGUBTK+8gcnzHmhY3sHgHn9bgeeZDp+LGuoUQaP+WrWA8Nq92gCTcZLWSA==",
-      "path": "microsoft.visualstudio.web.codegeneration.templating/9.0.0",
-      "hashPath": "microsoft.visualstudio.web.codegeneration.templating.9.0.0.nupkg.sha512"
+      "sha512": "sha512-nxzPPd0kJOVixNdHrFfKzMjdy3emYdTWpFC/ZNXfZZHwiQ0o67fam1jGznBXOxshpB4X3GEWgLFogbH/Mi871A==",
+      "path": "microsoft.visualstudio.web.codegeneration.templating/10.0.0",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.templating.10.0.0.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Utils/9.0.0": {
+    "Microsoft.VisualStudio.Web.CodeGeneration.Utils/10.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-O8uehWLzgQhq3H2f+dxEkuYF8wWoBrT7iKtQXnHAc96qlVdLSARSxt3hlxqFSzK3ZkHp2P6lHt76LRH6J0PDrw==",
-      "path": "microsoft.visualstudio.web.codegeneration.utils/9.0.0",
-      "hashPath": "microsoft.visualstudio.web.codegeneration.utils.9.0.0.nupkg.sha512"
+      "sha512": "sha512-M8aJ3bDRhRa5PvDR9CpaxB+3dY5+V157HVk/PP7dO+kQSD1eUbWq0Wh2uarpnQRSAm7hNacRpr4lIK5IdYMiVQ==",
+      "path": "microsoft.visualstudio.web.codegeneration.utils/10.0.0",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.utils.10.0.0.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/9.0.0": {
+    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/10.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-WJhdsFXkpA0XR6PCjoxe9pRIqT8NV8Ggojv2cwaeCwxApzTAbLnglwADteeF7WlgHnr1VmJ+xdgzzNAAcJ9+Rg==",
-      "path": "microsoft.visualstudio.web.codegenerators.mvc/9.0.0",
-      "hashPath": "microsoft.visualstudio.web.codegenerators.mvc.9.0.0.nupkg.sha512"
+      "sha512": "sha512-4Kf+vJEM8Bj9s+4UPvFFwuXCVWcuUedVIofRqWCZMaFsCBbUmrKMMkH0AAO5fvkOfxB0F3swjpH8fxzgziybdw==",
+      "path": "microsoft.visualstudio.web.codegenerators.mvc/10.0.0",
+      "hashPath": "microsoft.visualstudio.web.codegenerators.mvc.10.0.0.nupkg.sha512"
     },
     "Mono.TextTemplating/3.0.0": {
       "type": "package",
@@ -2490,68 +2522,68 @@
       "path": "newtonsoft.json/13.0.3",
       "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
     },
-    "NuGet.Common/6.11.0": {
+    "NuGet.Common/6.12.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-T3bCiKUSx8wdYpcqr6Dbx93zAqFp689ee/oa1tH22XI/xl7EUzQ7No/WlE1FUqvEX1+Mqar3wRNAn2O/yxo94g==",
-      "path": "nuget.common/6.11.0",
-      "hashPath": "nuget.common.6.11.0.nupkg.sha512"
+      "sha512": "sha512-nk8nTdhQl4x2VaAQUvefI7DDYAuBDlE+OZZRffm50Qx5dUAEq8wkc5JIqrN2lTEohObHPI/SXyG2UFdMQkrdyg==",
+      "path": "nuget.common/6.12.1",
+      "hashPath": "nuget.common.6.12.1.nupkg.sha512"
     },
-    "NuGet.Configuration/6.11.0": {
+    "NuGet.Configuration/6.12.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-73QprQqmumFrv3Ooi4YWpRYeBj8jZy9gNdOaOCp4pPInpt41SJJAz/aP4je+StwIJvi5HsgPPecLKekDIQEwKg==",
-      "path": "nuget.configuration/6.11.0",
-      "hashPath": "nuget.configuration.6.11.0.nupkg.sha512"
+      "sha512": "sha512-IRwlY1379ZgJ0oEJvjD+lDuOhJ5S1fsU5n/bEC5/i0+N9bo2WIMDAdaQ/qIdyK/gMJ/YWS+++GSX6rN7luqEvg==",
+      "path": "nuget.configuration/6.12.1",
+      "hashPath": "nuget.configuration.6.12.1.nupkg.sha512"
     },
-    "NuGet.DependencyResolver.Core/6.11.0": {
+    "NuGet.DependencyResolver.Core/6.12.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-SoiPKPooA+IF+iCsX1ykwi3M0e+yBL34QnwIP3ujhQEn1dhlP/N1XsYAnKkJPxV15EZCahuuS4HtnBsZx+CHKA==",
-      "path": "nuget.dependencyresolver.core/6.11.0",
-      "hashPath": "nuget.dependencyresolver.core.6.11.0.nupkg.sha512"
+      "sha512": "sha512-Nn4+pXW1qxGcq0OEQBJBh/FjKvWhzD49+kRzuOC9SkRZOrHsTaA12EsQ1mEE4rMUfqviaosmPEtvodJ4eKCmIw==",
+      "path": "nuget.dependencyresolver.core/6.12.1",
+      "hashPath": "nuget.dependencyresolver.core.6.12.1.nupkg.sha512"
     },
-    "NuGet.Frameworks/6.11.0": {
+    "NuGet.Frameworks/6.12.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Ew/mrfmLF5phsprysHbph2+tdZ10HMHAURavsr/Kx1WhybDG4vmGuoNLbbZMZOqnPRdpyCTc42OKWLoedxpYtA==",
-      "path": "nuget.frameworks/6.11.0",
-      "hashPath": "nuget.frameworks.6.11.0.nupkg.sha512"
+      "sha512": "sha512-kPaRD5RJC0ByUg+yGX6bDz5XHMI7OYmQwP8kbtef+vZ+csj/VDb5Bwas4ChxwhoAbI8lEvwP5/3aViQPpgNBow==",
+      "path": "nuget.frameworks/6.12.1",
+      "hashPath": "nuget.frameworks.6.12.1.nupkg.sha512"
     },
-    "NuGet.LibraryModel/6.11.0": {
+    "NuGet.LibraryModel/6.12.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-KUV2eeMICMb24OPcICn/wgncNzt6+W+lmFVO5eorTdo1qV4WXxYGyG1NTPiCY+Nrv5H/Ilnv9UaUM2ozqSmnjw==",
-      "path": "nuget.librarymodel/6.11.0",
-      "hashPath": "nuget.librarymodel.6.11.0.nupkg.sha512"
+      "sha512": "sha512-IqX7Ze7qSbhx22lsdnMbLJpcqrmwGyQbyNk9JSsZ/u5p6PIaZyeWsvHHy+oXU8fuRmmKfHBnZEsceaCAw6Xy5A==",
+      "path": "nuget.librarymodel/6.12.1",
+      "hashPath": "nuget.librarymodel.6.12.1.nupkg.sha512"
     },
-    "NuGet.Packaging/6.11.0": {
+    "NuGet.Packaging/6.12.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VmUv2LedVuPY1tfNybORO2I9IuqOzeV7I5JBD+PwNvJq2bAqovi4FCw2cYI0g+kjOJXBN2lAJfrfnqtUOlVJdQ==",
-      "path": "nuget.packaging/6.11.0",
-      "hashPath": "nuget.packaging.6.11.0.nupkg.sha512"
+      "sha512": "sha512-6s5NO3VNX6fIx6GwuWZtIsal9W1xkelYd3Vg2KUAg1zGqnKC3wB5IZlombvVGVGcwyl/A+iDvpUwSvgeDoB3wA==",
+      "path": "nuget.packaging/6.12.1",
+      "hashPath": "nuget.packaging.6.12.1.nupkg.sha512"
     },
-    "NuGet.ProjectModel/6.11.0": {
+    "NuGet.ProjectModel/6.12.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-g0KtmDH6fas97WsN73yV2h1F5JT9o6+Y0wlPK+ij9YLKaAXaF6+1HkSaQMMJ+xh9/jCJG9G6nau6InOlb1g48g==",
-      "path": "nuget.projectmodel/6.11.0",
-      "hashPath": "nuget.projectmodel.6.11.0.nupkg.sha512"
+      "sha512": "sha512-nzpVqooG0qumADw5t8YMg9e+ezVqUhhoGvoihVmu5O9gJDqzkRYswQzyIVsE24dirBQabW0X0Sv53f6ZLJCv+g==",
+      "path": "nuget.projectmodel/6.12.1",
+      "hashPath": "nuget.projectmodel.6.12.1.nupkg.sha512"
     },
-    "NuGet.Protocol/6.11.0": {
+    "NuGet.Protocol/6.12.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-p5B8oNLLnGhUfMbcS16aRiegj11pD6k+LELyRBqvNFR/pE3yR1XT+g1XS33ME9wvoU+xbCGnl4Grztt1jHPinw==",
-      "path": "nuget.protocol/6.11.0",
-      "hashPath": "nuget.protocol.6.11.0.nupkg.sha512"
+      "sha512": "sha512-VBN7OtG/Y9Rnj1WT3G8X88ZHu5Pq+yzca5Z6OI/FWXcENVAQkUl0ml6Cv8ghOqYyiuvnObGDV9oWLD/bIuVtDw==",
+      "path": "nuget.protocol/6.12.1",
+      "hashPath": "nuget.protocol.6.12.1.nupkg.sha512"
     },
-    "NuGet.Versioning/6.11.0": {
+    "NuGet.Versioning/6.12.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-v/GGlIj2dd7svplFmASWEueu62veKW0MrMtBaZ7QG8aJTSGv2yE+pgUGhXRcQ4nxNOEq/wLBrz1vkth/1SND7A==",
-      "path": "nuget.versioning/6.11.0",
-      "hashPath": "nuget.versioning.6.11.0.nupkg.sha512"
+      "sha512": "sha512-fJ6rFYANDnohFsdpaY79FvrJxI6murmoOxXz6nZlf819F48+IBKMnAIg3oIBRtZq5y498ObMtKnro5IitvizUg==",
+      "path": "nuget.versioning/6.12.1",
+      "hashPath": "nuget.versioning.6.12.1.nupkg.sha512"
     },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.11": {
       "type": "package",
@@ -2658,12 +2690,12 @@
       "path": "system.resources.extensions/9.0.0",
       "hashPath": "system.resources.extensions.9.0.0.nupkg.sha512"
     },
-    "System.Security.Cryptography.ProtectedData/9.0.0": {
+    "System.Security.Cryptography.ProtectedData/9.0.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-CJW+x/F6fmRQ7N6K8paasTw9PDZp4t7G76UjGNlSDgoHPF0h08vTzLYbLZpOLEJSg35d5wy2jCXGo84EN05DpQ==",
-      "path": "system.security.cryptography.protecteddata/9.0.0",
-      "hashPath": "system.security.cryptography.protecteddata.9.0.0.nupkg.sha512"
+      "sha512": "sha512-yErfw/3pZkJE/VKza/Cm5idTpIKOy/vsmVi59Ta5SruPVtubzxb8CtnE8tyUpzs5pr0Y28GUFfSVzAhCLN3F/Q==",
+      "path": "system.security.cryptography.protecteddata/9.0.6",
+      "hashPath": "system.security.cryptography.protecteddata.9.0.6.nupkg.sha512"
     },
     "System.Security.Permissions/9.0.0": {
       "type": "package",

@@ -596,18 +596,18 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/9.0.9": {
+      "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "9.0.9"
+          "Microsoft.EntityFrameworkCore.Relational": "10.0.0"
         },
         "compile": {
-          "lib/net9.0/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll": {
+          "lib/net10.0/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net9.0/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll": {
+          "lib/net10.0/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll": {
             "related": ".xml"
           }
         },
@@ -615,34 +615,34 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/9.0.9": {
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "9.0.9"
+          "Microsoft.EntityFrameworkCore.Relational": "10.0.0"
         },
         "compile": {
-          "lib/net9.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {
+          "lib/net10.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net9.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {
+          "lib/net10.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Identity.UI/9.0.9": {
+      "Microsoft.AspNetCore.Identity.UI/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.FileProviders.Embedded": "9.0.9"
+          "Microsoft.Extensions.FileProviders.Embedded": "10.0.0"
         },
         "compile": {
-          "lib/net9.0/Microsoft.AspNetCore.Identity.UI.dll": {
+          "lib/net10.0/Microsoft.AspNetCore.Identity.UI.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net9.0/Microsoft.AspNetCore.Identity.UI.dll": {
+          "lib/net10.0/Microsoft.AspNetCore.Identity.UI.dll": {
             "related": ".xml"
           }
         },
@@ -666,11 +666,11 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Razor.Language.dll": {}
         }
       },
-      "Microsoft.Build/17.10.4": {
+      "Microsoft.Build/17.11.48": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Build.Framework": "17.10.4",
-          "Microsoft.NET.StringTools": "17.10.4",
+          "Microsoft.Build.Framework": "17.11.48",
+          "Microsoft.NET.StringTools": "17.11.48",
           "System.Configuration.ConfigurationManager": "8.0.0",
           "System.Reflection.MetadataLoadContext": "8.0.0"
         },
@@ -748,16 +748,27 @@
           "buildTransitive/Microsoft.CodeAnalysis.Analyzers.targets": {}
         }
       },
-      "Microsoft.CodeAnalysis.AnalyzerUtilities/3.3.0": {
+      "Microsoft.CodeAnalysis.AnalyzerUtilities/4.14.0": {
         "type": "package",
+        "dependencies": {
+          "Microsoft.CodeAnalysis.Analyzers": "3.11.0",
+          "Microsoft.CodeAnalysis.Common": "3.11.0"
+        },
         "compile": {
           "lib/netstandard2.0/Microsoft.CodeAnalysis.AnalyzerUtilities.dll": {
-            "related": ".xml"
+            "related": ".pdb;.xml"
           }
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.CodeAnalysis.AnalyzerUtilities.dll": {
-            "related": ".xml"
+            "related": ".pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
           }
         }
       },
@@ -876,64 +887,70 @@
           }
         }
       },
-      "Microsoft.CodeAnalysis.CSharp.Features/4.8.0": {
+      "Microsoft.CodeAnalysis.CSharp.Features/4.14.0": {
         "type": "package",
         "dependencies": {
           "Humanizer.Core": "2.14.1",
-          "Microsoft.CodeAnalysis.CSharp": "[4.8.0]",
-          "Microsoft.CodeAnalysis.CSharp.Workspaces": "[4.8.0]",
-          "Microsoft.CodeAnalysis.Common": "[4.8.0]",
-          "Microsoft.CodeAnalysis.Features": "[4.8.0]",
-          "Microsoft.CodeAnalysis.Workspaces.Common": "[4.8.0]"
+          "Microsoft.CodeAnalysis.Analyzers": "3.11.0",
+          "Microsoft.CodeAnalysis.CSharp": "[4.14.0]",
+          "Microsoft.CodeAnalysis.CSharp.Workspaces": "[4.14.0]",
+          "Microsoft.CodeAnalysis.Common": "[4.14.0]",
+          "Microsoft.CodeAnalysis.Elfie": "1.0.0",
+          "Microsoft.CodeAnalysis.Features": "[4.14.0]",
+          "Microsoft.CodeAnalysis.Workspaces.Common": "[4.14.0]",
+          "Microsoft.DiaSymReader": "2.0.0",
+          "System.Composition": "9.0.0",
+          "System.Configuration.ConfigurationManager": "9.0.0",
+          "System.Security.Cryptography.ProtectedData": "9.0.0"
         },
         "compile": {
-          "lib/net7.0/Microsoft.CodeAnalysis.CSharp.Features.dll": {
+          "lib/net9.0/Microsoft.CodeAnalysis.CSharp.Features.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net7.0/Microsoft.CodeAnalysis.CSharp.Features.dll": {
+          "lib/net9.0/Microsoft.CodeAnalysis.CSharp.Features.dll": {
             "related": ".pdb;.xml"
           }
         },
         "resource": {
-          "lib/net7.0/cs/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/cs/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "cs"
           },
-          "lib/net7.0/de/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/de/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "de"
           },
-          "lib/net7.0/es/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/es/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "es"
           },
-          "lib/net7.0/fr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/fr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "fr"
           },
-          "lib/net7.0/it/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/it/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "it"
           },
-          "lib/net7.0/ja/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/ja/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "ja"
           },
-          "lib/net7.0/ko/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/ko/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "ko"
           },
-          "lib/net7.0/pl/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/pl/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "pl"
           },
-          "lib/net7.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "pt-BR"
           },
-          "lib/net7.0/ru/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/ru/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "ru"
           },
-          "lib/net7.0/tr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/tr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "tr"
           },
-          "lib/net7.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "zh-Hans"
           },
-          "lib/net7.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
+          "lib/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Features.resources.dll": {
             "locale": "zh-Hant"
           }
         }
@@ -1013,64 +1030,69 @@
           "lib/netstandard2.0/Microsoft.CodeAnalysis.Elfie.dll": {}
         }
       },
-      "Microsoft.CodeAnalysis.Features/4.8.0": {
+      "Microsoft.CodeAnalysis.Features/4.14.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.CodeAnalysis.AnalyzerUtilities": "3.3.0",
-          "Microsoft.CodeAnalysis.Common": "[4.8.0]",
+          "Humanizer.Core": "2.14.1",
+          "Microsoft.CodeAnalysis.AnalyzerUtilities": "[4.14.0]",
+          "Microsoft.CodeAnalysis.Analyzers": "3.11.0",
+          "Microsoft.CodeAnalysis.Common": "[4.14.0]",
           "Microsoft.CodeAnalysis.Elfie": "1.0.0",
-          "Microsoft.CodeAnalysis.Scripting.Common": "[4.8.0]",
-          "Microsoft.CodeAnalysis.Workspaces.Common": "[4.8.0]",
-          "Microsoft.DiaSymReader": "2.0.0"
+          "Microsoft.CodeAnalysis.Scripting.Common": "[4.14.0]",
+          "Microsoft.CodeAnalysis.Workspaces.Common": "[4.14.0]",
+          "Microsoft.DiaSymReader": "2.0.0",
+          "System.Composition": "9.0.0",
+          "System.Configuration.ConfigurationManager": "9.0.0",
+          "System.Security.Cryptography.ProtectedData": "9.0.0"
         },
         "compile": {
-          "lib/net7.0/Microsoft.CodeAnalysis.Features.dll": {
+          "lib/net9.0/Microsoft.CodeAnalysis.Features.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net7.0/Microsoft.CodeAnalysis.Features.dll": {
+          "lib/net9.0/Microsoft.CodeAnalysis.Features.dll": {
             "related": ".pdb;.xml"
           }
         },
         "resource": {
-          "lib/net7.0/cs/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/cs/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "cs"
           },
-          "lib/net7.0/de/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/de/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "de"
           },
-          "lib/net7.0/es/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/es/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "es"
           },
-          "lib/net7.0/fr/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/fr/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "fr"
           },
-          "lib/net7.0/it/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/it/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "it"
           },
-          "lib/net7.0/ja/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/ja/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "ja"
           },
-          "lib/net7.0/ko/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/ko/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "ko"
           },
-          "lib/net7.0/pl/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/pl/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "pl"
           },
-          "lib/net7.0/pt-BR/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/pt-BR/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "pt-BR"
           },
-          "lib/net7.0/ru/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/ru/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "ru"
           },
-          "lib/net7.0/tr/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/tr/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "tr"
           },
-          "lib/net7.0/zh-Hans/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/zh-Hans/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "zh-Hans"
           },
-          "lib/net7.0/zh-Hant/Microsoft.CodeAnalysis.Features.resources.dll": {
+          "lib/net9.0/zh-Hant/Microsoft.CodeAnalysis.Features.resources.dll": {
             "locale": "zh-Hant"
           }
         }
@@ -1089,59 +1111,60 @@
           "lib/netstandard2.0/Microsoft.CodeAnalysis.Razor.dll": {}
         }
       },
-      "Microsoft.CodeAnalysis.Scripting.Common/4.8.0": {
+      "Microsoft.CodeAnalysis.Scripting.Common/4.14.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.CodeAnalysis.Common": "[4.8.0]"
+          "Microsoft.CodeAnalysis.Analyzers": "3.11.0",
+          "Microsoft.CodeAnalysis.Common": "[4.14.0]"
         },
         "compile": {
-          "lib/net7.0/Microsoft.CodeAnalysis.Scripting.dll": {
+          "lib/net9.0/Microsoft.CodeAnalysis.Scripting.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net7.0/Microsoft.CodeAnalysis.Scripting.dll": {
+          "lib/net9.0/Microsoft.CodeAnalysis.Scripting.dll": {
             "related": ".pdb;.xml"
           }
         },
         "resource": {
-          "lib/net7.0/cs/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/cs/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "cs"
           },
-          "lib/net7.0/de/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/de/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "de"
           },
-          "lib/net7.0/es/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/es/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "es"
           },
-          "lib/net7.0/fr/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/fr/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "fr"
           },
-          "lib/net7.0/it/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/it/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "it"
           },
-          "lib/net7.0/ja/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/ja/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "ja"
           },
-          "lib/net7.0/ko/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/ko/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "ko"
           },
-          "lib/net7.0/pl/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/pl/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "pl"
           },
-          "lib/net7.0/pt-BR/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/pt-BR/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "pt-BR"
           },
-          "lib/net7.0/ru/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/ru/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "ru"
           },
-          "lib/net7.0/tr/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/tr/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "tr"
           },
-          "lib/net7.0/zh-Hans/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/zh-Hans/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "zh-Hans"
           },
-          "lib/net7.0/zh-Hant/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+          "lib/net9.0/zh-Hant/Microsoft.CodeAnalysis.Scripting.resources.dll": {
             "locale": "zh-Hant"
           }
         }
@@ -1587,30 +1610,30 @@
           }
         }
       },
-      "Microsoft.DotNet.Scaffolding.Shared/9.0.0": {
+      "Microsoft.DotNet.Scaffolding.Shared/10.0.0": {
         "type": "package",
         "dependencies": {
           "Humanizer": "2.14.1",
-          "Microsoft.CodeAnalysis.CSharp": "4.8.0",
-          "Microsoft.CodeAnalysis.CSharp.Features": "4.8.0",
-          "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.8.0",
-          "Microsoft.CodeAnalysis.Common": "4.8.0",
-          "Microsoft.CodeAnalysis.Features": "4.8.0",
-          "Microsoft.CodeAnalysis.Workspaces.Common": "4.8.0",
-          "Microsoft.Extensions.DependencyModel": "9.0.0-rc.2.24473.5",
+          "Microsoft.CodeAnalysis.CSharp": "4.14.0",
+          "Microsoft.CodeAnalysis.CSharp.Features": "4.14.0",
+          "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.14.0",
+          "Microsoft.CodeAnalysis.Common": "4.14.0",
+          "Microsoft.CodeAnalysis.Features": "4.14.0",
+          "Microsoft.CodeAnalysis.Workspaces.Common": "4.14.0",
+          "Microsoft.Extensions.DependencyModel": "10.0.0",
           "Mono.TextTemplating": "3.0.0",
           "Newtonsoft.Json": "13.0.3",
-          "NuGet.Packaging": "6.11.0",
-          "NuGet.ProjectModel": "6.11.0",
-          "System.Security.Cryptography.ProtectedData": "8.0.0"
+          "NuGet.Packaging": "6.12.1",
+          "NuGet.ProjectModel": "6.12.1",
+          "System.Security.Cryptography.ProtectedData": "9.0.6"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.DotNet.Scaffolding.Shared.dll": {
+          "lib/net9.0/Microsoft.DotNet.Scaffolding.Shared.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.DotNet.Scaffolding.Shared.dll": {
+          "lib/net9.0/Microsoft.DotNet.Scaffolding.Shared.dll": {
             "related": ".xml"
           }
         }
@@ -1730,10 +1753,10 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Tools/9.0.9": {
+      "Microsoft.EntityFrameworkCore.Tools/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "9.0.9"
+          "Microsoft.EntityFrameworkCore.Design": "10.0.0"
         }
       },
       "Microsoft.Extensions.DependencyModel/10.0.0": {
@@ -1752,15 +1775,15 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Extensions.FileProviders.Embedded/9.0.9": {
+      "Microsoft.Extensions.FileProviders.Embedded/10.0.0": {
         "type": "package",
         "compile": {
-          "lib/net9.0/Microsoft.Extensions.FileProviders.Embedded.dll": {
+          "lib/net10.0/Microsoft.Extensions.FileProviders.Embedded.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net9.0/Microsoft.Extensions.FileProviders.Embedded.dll": {
+          "lib/net10.0/Microsoft.Extensions.FileProviders.Embedded.dll": {
             "related": ".xml"
           }
         },
@@ -1784,227 +1807,247 @@
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration/9.0.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration/10.0.0": {
         "type": "package",
         "dependencies": {
           "Humanizer": "2.14.1",
           "Microsoft.AspNetCore.Razor.Language": "6.0.24",
-          "Microsoft.Build": "17.10.4",
-          "Microsoft.CodeAnalysis.CSharp": "4.8.0",
-          "Microsoft.CodeAnalysis.CSharp.Features": "4.8.0",
-          "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.8.0",
-          "Microsoft.CodeAnalysis.Common": "4.8.0",
-          "Microsoft.CodeAnalysis.Features": "4.8.0",
+          "Microsoft.Build": "17.11.48",
+          "Microsoft.Build.Tasks.Core": "17.14.28",
+          "Microsoft.Build.Utilities.Core": "17.14.28",
+          "Microsoft.CodeAnalysis.CSharp": "4.14.0",
+          "Microsoft.CodeAnalysis.CSharp.Features": "4.14.0",
+          "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.14.0",
+          "Microsoft.CodeAnalysis.Common": "4.14.0",
+          "Microsoft.CodeAnalysis.Features": "4.14.0",
           "Microsoft.CodeAnalysis.Razor": "6.0.24",
-          "Microsoft.CodeAnalysis.Workspaces.Common": "4.8.0",
-          "Microsoft.Extensions.DependencyModel": "9.0.0-rc.2.24473.5",
-          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "9.0.0",
+          "Microsoft.CodeAnalysis.Workspaces.Common": "4.14.0",
+          "Microsoft.CodeAnalysis.Workspaces.MSBuild": "4.14.0",
+          "Microsoft.EntityFrameworkCore": "10.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "10.0.0",
+          "Microsoft.Extensions.DependencyModel": "10.0.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "10.0.0",
           "Mono.TextTemplating": "3.0.0",
           "Newtonsoft.Json": "13.0.3",
-          "NuGet.Packaging": "6.11.0",
-          "NuGet.ProjectModel": "6.11.0",
-          "System.Security.Cryptography.ProtectedData": "8.0.0"
+          "NuGet.Packaging": "6.12.1",
+          "NuGet.ProjectModel": "6.12.1",
+          "System.Security.Cryptography.ProtectedData": "9.0.6"
         },
         "compile": {
-          "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.dll": {
+          "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.dll": {
+          "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Core/9.0.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Core/10.0.0": {
         "type": "package",
         "dependencies": {
           "Humanizer": "2.14.1",
           "Microsoft.AspNetCore.Razor.Language": "6.0.24",
-          "Microsoft.Build": "17.10.4",
-          "Microsoft.CodeAnalysis.CSharp": "4.8.0",
-          "Microsoft.CodeAnalysis.CSharp.Features": "4.8.0",
-          "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.8.0",
-          "Microsoft.CodeAnalysis.Common": "4.8.0",
-          "Microsoft.CodeAnalysis.Features": "4.8.0",
+          "Microsoft.Build": "17.11.48",
+          "Microsoft.CodeAnalysis.CSharp": "4.14.0",
+          "Microsoft.CodeAnalysis.CSharp.Features": "4.14.0",
+          "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.14.0",
+          "Microsoft.CodeAnalysis.Common": "4.14.0",
+          "Microsoft.CodeAnalysis.Features": "4.14.0",
           "Microsoft.CodeAnalysis.Razor": "6.0.24",
-          "Microsoft.CodeAnalysis.Workspaces.Common": "4.8.0",
-          "Microsoft.Extensions.DependencyModel": "9.0.0-rc.2.24473.5",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "9.0.0",
+          "Microsoft.CodeAnalysis.Workspaces.Common": "4.14.0",
+          "Microsoft.Extensions.DependencyModel": "10.0.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "10.0.0",
           "Mono.TextTemplating": "3.0.0",
           "Newtonsoft.Json": "13.0.3",
-          "NuGet.Packaging": "6.11.0",
-          "NuGet.ProjectModel": "6.11.0",
-          "System.Security.Cryptography.ProtectedData": "8.0.0"
+          "NuGet.Packaging": "6.12.1",
+          "NuGet.ProjectModel": "6.12.1",
+          "System.Security.Cryptography.ProtectedData": "9.0.6"
         },
         "compile": {
-          "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll": {
+          "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll": {
+          "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design/9.0.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design/10.0.0": {
         "type": "package",
         "dependencies": {
           "Humanizer": "2.14.1",
           "Microsoft.AspNetCore.Razor.Language": "6.0.24",
-          "Microsoft.Build": "17.10.4",
-          "Microsoft.CodeAnalysis.CSharp": "4.8.0",
-          "Microsoft.CodeAnalysis.CSharp.Features": "4.8.0",
-          "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.8.0",
-          "Microsoft.CodeAnalysis.Common": "4.8.0",
-          "Microsoft.CodeAnalysis.Features": "4.8.0",
+          "Microsoft.Build": "17.11.48",
+          "Microsoft.Build.Tasks.Core": "17.14.28",
+          "Microsoft.Build.Utilities.Core": "17.14.28",
+          "Microsoft.CodeAnalysis.CSharp": "4.14.0",
+          "Microsoft.CodeAnalysis.CSharp.Features": "4.14.0",
+          "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.14.0",
+          "Microsoft.CodeAnalysis.Common": "4.14.0",
+          "Microsoft.CodeAnalysis.Features": "4.14.0",
           "Microsoft.CodeAnalysis.Razor": "6.0.24",
-          "Microsoft.CodeAnalysis.Workspaces.Common": "4.8.0",
-          "Microsoft.DotNet.Scaffolding.Shared": "9.0.0",
-          "Microsoft.Extensions.DependencyModel": "9.0.0-rc.2.24473.5",
-          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "9.0.0",
+          "Microsoft.CodeAnalysis.Workspaces.Common": "4.14.0",
+          "Microsoft.CodeAnalysis.Workspaces.MSBuild": "4.14.0",
+          "Microsoft.DotNet.Scaffolding.Shared": "10.0.0",
+          "Microsoft.EntityFrameworkCore": "10.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "10.0.0",
+          "Microsoft.Extensions.DependencyModel": "10.0.0",
+          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "10.0.0",
           "Mono.TextTemplating": "3.0.0",
           "Newtonsoft.Json": "13.0.3",
-          "NuGet.Packaging": "6.11.0",
-          "NuGet.ProjectModel": "6.11.0",
-          "System.Security.Cryptography.ProtectedData": "8.0.0"
+          "NuGet.Packaging": "6.12.1",
+          "NuGet.ProjectModel": "6.12.1",
+          "System.Security.Cryptography.ProtectedData": "9.0.6"
         },
         "compile": {
-          "lib/net8.0/dotnet-aspnet-codegenerator-design.dll": {
+          "lib/net10.0/dotnet-aspnet-codegenerator-design.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/dotnet-aspnet-codegenerator-design.dll": {
+          "lib/net10.0/dotnet-aspnet-codegenerator-design.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/9.0.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/10.0.0": {
         "type": "package",
         "dependencies": {
           "Humanizer": "2.14.1",
           "Microsoft.AspNetCore.Razor.Language": "6.0.24",
-          "Microsoft.Build": "17.10.4",
-          "Microsoft.CodeAnalysis.CSharp": "4.8.0",
-          "Microsoft.CodeAnalysis.CSharp.Features": "4.8.0",
-          "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.8.0",
-          "Microsoft.CodeAnalysis.Common": "4.8.0",
-          "Microsoft.CodeAnalysis.Features": "4.8.0",
+          "Microsoft.Build": "17.11.48",
+          "Microsoft.Build.Tasks.Core": "17.14.28",
+          "Microsoft.Build.Utilities.Core": "17.14.28",
+          "Microsoft.CodeAnalysis.CSharp": "4.14.0",
+          "Microsoft.CodeAnalysis.CSharp.Features": "4.14.0",
+          "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.14.0",
+          "Microsoft.CodeAnalysis.Common": "4.14.0",
+          "Microsoft.CodeAnalysis.Features": "4.14.0",
           "Microsoft.CodeAnalysis.Razor": "6.0.24",
-          "Microsoft.CodeAnalysis.Workspaces.Common": "4.8.0",
-          "Microsoft.DotNet.Scaffolding.Shared": "9.0.0",
-          "Microsoft.Extensions.DependencyModel": "9.0.0-rc.2.24473.5",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "9.0.0",
+          "Microsoft.CodeAnalysis.Workspaces.Common": "4.14.0",
+          "Microsoft.CodeAnalysis.Workspaces.MSBuild": "4.14.0",
+          "Microsoft.DotNet.Scaffolding.Shared": "10.0.0",
+          "Microsoft.EntityFrameworkCore": "10.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "10.0.0",
+          "Microsoft.Extensions.DependencyModel": "10.0.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "10.0.0",
           "Mono.TextTemplating": "3.0.0",
           "Newtonsoft.Json": "13.0.3",
-          "NuGet.Packaging": "6.11.0",
-          "NuGet.ProjectModel": "6.11.0",
-          "System.Security.Cryptography.ProtectedData": "8.0.0"
+          "NuGet.Packaging": "6.12.1",
+          "NuGet.ProjectModel": "6.12.1",
+          "System.Security.Cryptography.ProtectedData": "9.0.6"
         },
         "compile": {
-          "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll": {
+          "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll": {
             "related": ".runtimeconfig.json;.xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll": {
+          "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll": {
             "related": ".runtimeconfig.json;.xml"
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/9.0.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/10.0.0": {
         "type": "package",
         "dependencies": {
           "Humanizer": "2.14.1",
           "Microsoft.AspNetCore.Razor.Language": "6.0.24",
-          "Microsoft.Build": "17.10.4",
-          "Microsoft.CodeAnalysis.CSharp": "4.8.0",
-          "Microsoft.CodeAnalysis.CSharp.Features": "4.8.0",
-          "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.8.0",
-          "Microsoft.CodeAnalysis.Common": "4.8.0",
-          "Microsoft.CodeAnalysis.Features": "4.8.0",
+          "Microsoft.Build": "17.11.48",
+          "Microsoft.CodeAnalysis.CSharp": "4.14.0",
+          "Microsoft.CodeAnalysis.CSharp.Features": "4.14.0",
+          "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.14.0",
+          "Microsoft.CodeAnalysis.Common": "4.14.0",
+          "Microsoft.CodeAnalysis.Features": "4.14.0",
           "Microsoft.CodeAnalysis.Razor": "6.0.24",
-          "Microsoft.CodeAnalysis.Workspaces.Common": "4.8.0",
-          "Microsoft.Extensions.DependencyModel": "9.0.0-rc.2.24473.5",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "9.0.0",
+          "Microsoft.CodeAnalysis.Workspaces.Common": "4.14.0",
+          "Microsoft.Extensions.DependencyModel": "10.0.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "10.0.0",
           "Mono.TextTemplating": "3.0.0",
           "Newtonsoft.Json": "13.0.3",
-          "NuGet.Packaging": "6.11.0",
-          "NuGet.ProjectModel": "6.11.0",
-          "System.Security.Cryptography.ProtectedData": "8.0.0"
+          "NuGet.Packaging": "6.12.1",
+          "NuGet.ProjectModel": "6.12.1",
+          "System.Security.Cryptography.ProtectedData": "9.0.6"
         },
         "compile": {
-          "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll": {
+          "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll": {
+          "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/9.0.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/10.0.0": {
         "type": "package",
         "dependencies": {
           "Humanizer": "2.14.1",
-          "Microsoft.Build": "17.10.4",
-          "Microsoft.CodeAnalysis.CSharp": "4.8.0",
-          "Microsoft.CodeAnalysis.CSharp.Features": "4.8.0",
-          "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.8.0",
-          "Microsoft.CodeAnalysis.Common": "4.8.0",
-          "Microsoft.CodeAnalysis.Features": "4.8.0",
-          "Microsoft.CodeAnalysis.Workspaces.Common": "4.8.0",
-          "Microsoft.DotNet.Scaffolding.Shared": "9.0.0",
-          "Microsoft.Extensions.DependencyModel": "9.0.0-rc.2.24473.5",
+          "Microsoft.Build": "17.11.48",
+          "Microsoft.CodeAnalysis.CSharp": "4.14.0",
+          "Microsoft.CodeAnalysis.CSharp.Features": "4.14.0",
+          "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.14.0",
+          "Microsoft.CodeAnalysis.Common": "4.14.0",
+          "Microsoft.CodeAnalysis.Features": "4.14.0",
+          "Microsoft.CodeAnalysis.Workspaces.Common": "4.14.0",
+          "Microsoft.DotNet.Scaffolding.Shared": "10.0.0",
+          "Microsoft.Extensions.DependencyModel": "10.0.0",
           "Mono.TextTemplating": "3.0.0",
           "Newtonsoft.Json": "13.0.3",
-          "NuGet.Packaging": "6.11.0",
-          "NuGet.ProjectModel": "6.11.0",
-          "System.Security.Cryptography.ProtectedData": "8.0.0"
+          "NuGet.Packaging": "6.12.1",
+          "NuGet.ProjectModel": "6.12.1",
+          "System.Security.Cryptography.ProtectedData": "9.0.6"
         },
         "compile": {
-          "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll": {
+          "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll": {
+          "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/9.0.0": {
+      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/10.0.0": {
         "type": "package",
         "dependencies": {
           "Humanizer": "2.14.1",
           "Microsoft.AspNetCore.Razor.Language": "6.0.24",
-          "Microsoft.Build": "17.10.4",
-          "Microsoft.CodeAnalysis.CSharp": "4.8.0",
-          "Microsoft.CodeAnalysis.CSharp.Features": "4.8.0",
-          "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.8.0",
-          "Microsoft.CodeAnalysis.Common": "4.8.0",
-          "Microsoft.CodeAnalysis.Features": "4.8.0",
+          "Microsoft.Build": "17.11.48",
+          "Microsoft.Build.Tasks.Core": "17.14.28",
+          "Microsoft.Build.Utilities.Core": "17.14.28",
+          "Microsoft.CodeAnalysis.CSharp": "4.14.0",
+          "Microsoft.CodeAnalysis.CSharp.Features": "4.14.0",
+          "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.14.0",
+          "Microsoft.CodeAnalysis.Common": "4.14.0",
+          "Microsoft.CodeAnalysis.Features": "4.14.0",
           "Microsoft.CodeAnalysis.Razor": "6.0.24",
-          "Microsoft.CodeAnalysis.Workspaces.Common": "4.8.0",
-          "Microsoft.DotNet.Scaffolding.Shared": "9.0.0",
-          "Microsoft.Extensions.DependencyModel": "9.0.0-rc.2.24473.5",
-          "Microsoft.VisualStudio.Web.CodeGeneration": "9.0.0",
+          "Microsoft.CodeAnalysis.Workspaces.Common": "4.14.0",
+          "Microsoft.CodeAnalysis.Workspaces.MSBuild": "4.14.0",
+          "Microsoft.DotNet.Scaffolding.Shared": "10.0.0",
+          "Microsoft.EntityFrameworkCore": "10.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "10.0.0",
+          "Microsoft.Extensions.DependencyModel": "10.0.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration": "10.0.0",
           "Mono.TextTemplating": "3.0.0",
           "Newtonsoft.Json": "13.0.3",
-          "NuGet.Packaging": "6.11.0",
-          "NuGet.ProjectModel": "6.11.0",
-          "System.Security.Cryptography.ProtectedData": "8.0.0"
+          "NuGet.Packaging": "6.12.1",
+          "NuGet.ProjectModel": "6.12.1",
+          "System.Security.Cryptography.ProtectedData": "9.0.6"
         },
         "compile": {
-          "lib/net8.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {
+          "lib/net10.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {
+          "lib/net10.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {
             "related": ".xml"
           }
         }
@@ -2037,113 +2080,149 @@
           }
         }
       },
-      "NuGet.Common/6.11.0": {
+      "NuGet.Common/6.12.1": {
         "type": "package",
         "dependencies": {
-          "NuGet.Frameworks": "6.11.0"
+          "NuGet.Frameworks": "6.12.1"
         },
         "compile": {
-          "lib/netstandard2.0/NuGet.Common.dll": {}
+          "lib/netstandard2.0/NuGet.Common.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NuGet.Common.dll": {}
+          "lib/netstandard2.0/NuGet.Common.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NuGet.Configuration/6.11.0": {
+      "NuGet.Configuration/6.12.1": {
         "type": "package",
         "dependencies": {
-          "NuGet.Common": "6.11.0",
+          "NuGet.Common": "6.12.1",
           "System.Security.Cryptography.ProtectedData": "4.4.0"
         },
         "compile": {
-          "lib/netstandard2.0/NuGet.Configuration.dll": {}
+          "lib/netstandard2.0/NuGet.Configuration.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NuGet.Configuration.dll": {}
+          "lib/netstandard2.0/NuGet.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NuGet.DependencyResolver.Core/6.11.0": {
+      "NuGet.DependencyResolver.Core/6.12.1": {
         "type": "package",
         "dependencies": {
-          "NuGet.Configuration": "6.11.0",
-          "NuGet.LibraryModel": "6.11.0",
-          "NuGet.Protocol": "6.11.0"
+          "NuGet.Configuration": "6.12.1",
+          "NuGet.LibraryModel": "6.12.1",
+          "NuGet.Protocol": "6.12.1"
         },
         "compile": {
-          "lib/net5.0/NuGet.DependencyResolver.Core.dll": {}
+          "lib/net5.0/NuGet.DependencyResolver.Core.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net5.0/NuGet.DependencyResolver.Core.dll": {}
+          "lib/net5.0/NuGet.DependencyResolver.Core.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NuGet.Frameworks/6.11.0": {
+      "NuGet.Frameworks/6.12.1": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/NuGet.Frameworks.dll": {}
+          "lib/netstandard2.0/NuGet.Frameworks.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NuGet.Frameworks.dll": {}
+          "lib/netstandard2.0/NuGet.Frameworks.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NuGet.LibraryModel/6.11.0": {
+      "NuGet.LibraryModel/6.12.1": {
         "type": "package",
         "dependencies": {
-          "NuGet.Common": "6.11.0",
-          "NuGet.Versioning": "6.11.0"
+          "NuGet.Common": "6.12.1",
+          "NuGet.Versioning": "6.12.1"
         },
         "compile": {
-          "lib/netstandard2.0/NuGet.LibraryModel.dll": {}
+          "lib/netstandard2.0/NuGet.LibraryModel.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NuGet.LibraryModel.dll": {}
+          "lib/netstandard2.0/NuGet.LibraryModel.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NuGet.Packaging/6.11.0": {
+      "NuGet.Packaging/6.12.1": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.3",
-          "NuGet.Configuration": "6.11.0",
-          "NuGet.Versioning": "6.11.0",
+          "NuGet.Configuration": "6.12.1",
+          "NuGet.Versioning": "6.12.1",
           "System.Security.Cryptography.Pkcs": "6.0.4"
         },
         "compile": {
-          "lib/net5.0/NuGet.Packaging.dll": {}
+          "lib/net5.0/NuGet.Packaging.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net5.0/NuGet.Packaging.dll": {}
+          "lib/net5.0/NuGet.Packaging.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NuGet.ProjectModel/6.11.0": {
+      "NuGet.ProjectModel/6.12.1": {
         "type": "package",
         "dependencies": {
-          "NuGet.DependencyResolver.Core": "6.11.0"
+          "NuGet.DependencyResolver.Core": "6.12.1"
         },
         "compile": {
-          "lib/net5.0/NuGet.ProjectModel.dll": {}
+          "lib/net5.0/NuGet.ProjectModel.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net5.0/NuGet.ProjectModel.dll": {}
+          "lib/net5.0/NuGet.ProjectModel.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NuGet.Protocol/6.11.0": {
+      "NuGet.Protocol/6.12.1": {
         "type": "package",
         "dependencies": {
-          "NuGet.Packaging": "6.11.0"
+          "NuGet.Packaging": "6.12.1"
         },
         "compile": {
-          "lib/net5.0/NuGet.Protocol.dll": {}
+          "lib/net5.0/NuGet.Protocol.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net5.0/NuGet.Protocol.dll": {}
+          "lib/net5.0/NuGet.Protocol.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "NuGet.Versioning/6.11.0": {
+      "NuGet.Versioning/6.12.1": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/NuGet.Versioning.dll": {}
+          "lib/netstandard2.0/NuGet.Versioning.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/NuGet.Versioning.dll": {}
+          "lib/netstandard2.0/NuGet.Versioning.dll": {
+            "related": ".xml"
+          }
         }
       },
       "SQLitePCLRaw.bundle_e_sqlite3/2.1.11": {
@@ -2513,7 +2592,7 @@
           }
         }
       },
-      "System.Security.Cryptography.ProtectedData/9.0.0": {
+      "System.Security.Cryptography.ProtectedData/9.0.6": {
         "type": "package",
         "compile": {
           "lib/net9.0/System.Security.Cryptography.ProtectedData.dll": {
@@ -3316,44 +3395,47 @@
         "logo.png"
       ]
     },
-    "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/9.0.9": {
-      "sha512": "ClnQ7NYH6glI4B8b91qiu0vN+5cuMrltpJJoJQmD9LPNMMTinkqmzEyFBce8r7Y68dEWiq14CBGYdr91++z+NQ==",
+    "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/10.0.0": {
+      "sha512": "+G3o7pCNNqtuQMtO2Sxdng18Wc0RjQmbNG41GUQUM3rMjytPv59p2/9gCA+iHs2juG8/a6q7uxq8OH8WaVAk6Q==",
       "type": "package",
-      "path": "microsoft.aspnetcore.diagnostics.entityframeworkcore/9.0.9",
+      "path": "microsoft.aspnetcore.diagnostics.entityframeworkcore/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net9.0/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll",
-        "lib/net9.0/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.xml",
-        "microsoft.aspnetcore.diagnostics.entityframeworkcore.9.0.9.nupkg.sha512",
+        "lib/net10.0/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll",
+        "lib/net10.0/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.xml",
+        "microsoft.aspnetcore.diagnostics.entityframeworkcore.10.0.0.nupkg.sha512",
         "microsoft.aspnetcore.diagnostics.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Identity.EntityFrameworkCore/9.0.9": {
-      "sha512": "dks8XEL1RFT8BmytQCKq0ovWwOUb8cVImdCA1fH8+SQoMxU2HvtyG6KNeQfKAudny2YQjl8H812pkvdw6rEqdg==",
+    "Microsoft.AspNetCore.Identity.EntityFrameworkCore/10.0.0": {
+      "sha512": "mH1+58nbX5RWSd8hajSnXSdpQ1MN3oca488Zd+DvKX2nPTAyTVNRzubMV06BmPcjOZ9waLr/AjwcNiCQ8bCscQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.identity.entityframeworkcore/9.0.9",
+      "path": "microsoft.aspnetcore.identity.entityframeworkcore/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net9.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll",
-        "lib/net9.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml",
-        "microsoft.aspnetcore.identity.entityframeworkcore.9.0.9.nupkg.sha512",
+        "lib/net10.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll",
+        "lib/net10.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml",
+        "microsoft.aspnetcore.identity.entityframeworkcore.10.0.0.nupkg.sha512",
         "microsoft.aspnetcore.identity.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Identity.UI/9.0.9": {
-      "sha512": "XfNdgEDatFIlrui4LWmTnBGIy5RQ8b2ZTj14qklgAgKvYIch5VlaiT0l50xF3SIAIEzJBFeJ7EJqASzHFX4uzQ==",
+    "Microsoft.AspNetCore.Identity.UI/10.0.0": {
+      "sha512": "DvqmVNTJq2PWSUi5NfV8zAd9sFrfSuq0cifaj6YHaunQMeWMoCjhC2ChFRuIUs5ZiIFOEg2gmSeke2OES7RAwA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.identity.ui/9.0.9",
+      "path": "microsoft.aspnetcore.identity.ui/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "build/Microsoft.AspNetCore.Identity.UI.props",
         "build/Microsoft.AspNetCore.Identity.UI.targets",
@@ -3364,9 +3446,9 @@
         "build/Microsoft.AspNetCore.StaticWebAssets.targets",
         "buildMultiTargeting/Microsoft.AspNetCore.Identity.UI.targets",
         "buildTransitive/Microsoft.AspNetCore.Identity.UI.targets",
-        "lib/net9.0/Microsoft.AspNetCore.Identity.UI.dll",
-        "lib/net9.0/Microsoft.AspNetCore.Identity.UI.xml",
-        "microsoft.aspnetcore.identity.ui.9.0.9.nupkg.sha512",
+        "lib/net10.0/Microsoft.AspNetCore.Identity.UI.dll",
+        "lib/net10.0/Microsoft.AspNetCore.Identity.UI.xml",
+        "microsoft.aspnetcore.identity.ui.10.0.0.nupkg.sha512",
         "microsoft.aspnetcore.identity.ui.nuspec",
         "staticwebassets/V4/css/site.css",
         "staticwebassets/V4/favicon.ico",
@@ -3483,10 +3565,10 @@
         "microsoft.aspnetcore.razor.language.nuspec"
       ]
     },
-    "Microsoft.Build/17.10.4": {
-      "sha512": "ZmGA8vhVXFzC4oo48ybQKlEybVKd0Ntfdr+Enqrn5ES1R6e/krIK9hLk0W33xuT0/G6QYd3YdhJZh+Xle717Ag==",
+    "Microsoft.Build/17.11.48": {
+      "sha512": "g8Kn575mNAKcuFotV3C7xvF+IbxuHennl67LH2shL2au1U6UqwReTDygCHyU04+koc2Yn7fHIbVQaC08HqEWow==",
       "type": "package",
-      "path": "microsoft.build/17.10.4",
+      "path": "microsoft.build/17.11.48",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3498,7 +3580,7 @@
         "lib/net8.0/Microsoft.Build.dll",
         "lib/net8.0/Microsoft.Build.pdb",
         "lib/net8.0/Microsoft.Build.xml",
-        "microsoft.build.17.10.4.nupkg.sha512",
+        "microsoft.build.17.11.48.nupkg.sha512",
         "microsoft.build.nuspec",
         "notices/THIRDPARTYNOTICES.txt",
         "ref/net472/Microsoft.Build.dll",
@@ -4287,22 +4369,24 @@
         "tools/uninstall.ps1"
       ]
     },
-    "Microsoft.CodeAnalysis.AnalyzerUtilities/3.3.0": {
-      "sha512": "gyQ70pJ4T7hu/s0+QnEaXtYfeG/JrttGnxHJlrhpxsQjRIUGuRhVwNBtkHHYOrUAZ/l47L98/NiJX6QmTwAyrg==",
+    "Microsoft.CodeAnalysis.AnalyzerUtilities/4.14.0": {
+      "sha512": "Tyfyuz6l+Ifmg7oiv86jpUg1CjqDMUGNJm1psnMkN1CCeXREPP/A9XafSGDRGoJ+gnI9a3Lk/1efvRspMdZOiQ==",
       "type": "package",
-      "path": "microsoft.codeanalysis.analyzerutilities/3.3.0",
-      "hasTools": true,
+      "path": "microsoft.codeanalysis.analyzerutilities/4.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "EULA.rtf",
+        "Icon.png",
         "ThirdPartyNotices.rtf",
+        "content/EULA.txt",
+        "content/ThirdPartyNotices.txt",
+        "contentFiles/any/netstandard2.0/EULA.txt",
+        "contentFiles/any/netstandard2.0/ThirdPartyNotices.txt",
         "lib/netstandard2.0/Microsoft.CodeAnalysis.AnalyzerUtilities.dll",
+        "lib/netstandard2.0/Microsoft.CodeAnalysis.AnalyzerUtilities.pdb",
         "lib/netstandard2.0/Microsoft.CodeAnalysis.AnalyzerUtilities.xml",
-        "microsoft.codeanalysis.analyzerutilities.3.3.0.nupkg.sha512",
-        "microsoft.codeanalysis.analyzerutilities.nuspec",
-        "tools/install.ps1",
-        "tools/uninstall.ps1"
+        "microsoft.codeanalysis.analyzerutilities.4.14.0.nupkg.sha512",
+        "microsoft.codeanalysis.analyzerutilities.nuspec"
       ]
     },
     "Microsoft.CodeAnalysis.Common/4.14.0": {
@@ -4427,47 +4511,47 @@
         "microsoft.codeanalysis.csharp.nuspec"
       ]
     },
-    "Microsoft.CodeAnalysis.CSharp.Features/4.8.0": {
-      "sha512": "Gpas3l8PE1xz1VDIJNMkYuoFPXtuALxybP04caXh9avC2a0elsoBdukndkJXVZgdKPwraf0a98s7tjqnEk5QIQ==",
+    "Microsoft.CodeAnalysis.CSharp.Features/4.14.0": {
+      "sha512": "JYOIwYcc7xkvG2ElgyVm1lRsgJlPNnP7k45xmfGfI+5T5eajEYUQU75kq8xB4bqjjX7ux8AZr330OvrVv5ZvrA==",
       "type": "package",
-      "path": "microsoft.codeanalysis.csharp.features/4.8.0",
+      "path": "microsoft.codeanalysis.csharp.features/4.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "ThirdPartyNotices.rtf",
-        "lib/net6.0/Microsoft.CodeAnalysis.CSharp.Features.dll",
-        "lib/net6.0/Microsoft.CodeAnalysis.CSharp.Features.pdb",
-        "lib/net6.0/Microsoft.CodeAnalysis.CSharp.Features.xml",
-        "lib/net6.0/cs/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net6.0/de/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net6.0/es/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net6.0/fr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net6.0/it/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net6.0/ja/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net6.0/ko/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net6.0/pl/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net6.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net6.0/ru/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net6.0/tr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net6.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net6.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net7.0/Microsoft.CodeAnalysis.CSharp.Features.dll",
-        "lib/net7.0/Microsoft.CodeAnalysis.CSharp.Features.pdb",
-        "lib/net7.0/Microsoft.CodeAnalysis.CSharp.Features.xml",
-        "lib/net7.0/cs/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net7.0/de/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net7.0/es/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net7.0/fr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net7.0/it/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net7.0/ja/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net7.0/ko/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net7.0/pl/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net7.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net7.0/ru/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net7.0/tr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net7.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "lib/net7.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net8.0/Microsoft.CodeAnalysis.CSharp.Features.dll",
+        "lib/net8.0/Microsoft.CodeAnalysis.CSharp.Features.pdb",
+        "lib/net8.0/Microsoft.CodeAnalysis.CSharp.Features.xml",
+        "lib/net8.0/cs/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net8.0/de/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net8.0/es/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net8.0/fr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net8.0/it/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net8.0/ja/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net8.0/ko/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net8.0/pl/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net8.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net8.0/ru/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net8.0/tr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net8.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net8.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net9.0/Microsoft.CodeAnalysis.CSharp.Features.dll",
+        "lib/net9.0/Microsoft.CodeAnalysis.CSharp.Features.pdb",
+        "lib/net9.0/Microsoft.CodeAnalysis.CSharp.Features.xml",
+        "lib/net9.0/cs/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net9.0/de/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net9.0/es/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net9.0/fr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net9.0/it/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net9.0/ja/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net9.0/ko/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net9.0/pl/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net9.0/ru/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net9.0/tr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
+        "lib/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
         "lib/netstandard2.0/Microsoft.CodeAnalysis.CSharp.Features.dll",
         "lib/netstandard2.0/Microsoft.CodeAnalysis.CSharp.Features.pdb",
         "lib/netstandard2.0/Microsoft.CodeAnalysis.CSharp.Features.xml",
@@ -4484,7 +4568,7 @@
         "lib/netstandard2.0/tr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
         "lib/netstandard2.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Features.resources.dll",
-        "microsoft.codeanalysis.csharp.features.4.8.0.nupkg.sha512",
+        "microsoft.codeanalysis.csharp.features.4.14.0.nupkg.sha512",
         "microsoft.codeanalysis.csharp.features.nuspec"
       ]
     },
@@ -4562,47 +4646,47 @@
         "microsoft.codeanalysis.elfie.nuspec"
       ]
     },
-    "Microsoft.CodeAnalysis.Features/4.8.0": {
-      "sha512": "sCVzMtSETGE16KeScwwlVfxaKRbUMSf/cgRPRPMJuou37SLT7XkIBzJu4e7mlFTzpJbfalV5tOcKpUtLO3eJAg==",
+    "Microsoft.CodeAnalysis.Features/4.14.0": {
+      "sha512": "UHQfGmj7/9HjD8hKndFKtyg4SYocz8+6ZFtEjx9xT8+C3wuRcEMobGanJvmp6L8quuB0nNVZR0QEsK5IkSXnlQ==",
       "type": "package",
-      "path": "microsoft.codeanalysis.features/4.8.0",
+      "path": "microsoft.codeanalysis.features/4.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "ThirdPartyNotices.rtf",
-        "lib/net6.0/Microsoft.CodeAnalysis.Features.dll",
-        "lib/net6.0/Microsoft.CodeAnalysis.Features.pdb",
-        "lib/net6.0/Microsoft.CodeAnalysis.Features.xml",
-        "lib/net6.0/cs/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net6.0/de/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net6.0/es/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net6.0/fr/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net6.0/it/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net6.0/ja/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net6.0/ko/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net6.0/pl/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net6.0/pt-BR/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net6.0/ru/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net6.0/tr/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net6.0/zh-Hans/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net6.0/zh-Hant/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net7.0/Microsoft.CodeAnalysis.Features.dll",
-        "lib/net7.0/Microsoft.CodeAnalysis.Features.pdb",
-        "lib/net7.0/Microsoft.CodeAnalysis.Features.xml",
-        "lib/net7.0/cs/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net7.0/de/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net7.0/es/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net7.0/fr/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net7.0/it/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net7.0/ja/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net7.0/ko/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net7.0/pl/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net7.0/pt-BR/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net7.0/ru/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net7.0/tr/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net7.0/zh-Hans/Microsoft.CodeAnalysis.Features.resources.dll",
-        "lib/net7.0/zh-Hant/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net8.0/Microsoft.CodeAnalysis.Features.dll",
+        "lib/net8.0/Microsoft.CodeAnalysis.Features.pdb",
+        "lib/net8.0/Microsoft.CodeAnalysis.Features.xml",
+        "lib/net8.0/cs/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net8.0/de/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net8.0/es/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net8.0/fr/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net8.0/it/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net8.0/ja/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net8.0/ko/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net8.0/pl/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net8.0/pt-BR/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net8.0/ru/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net8.0/tr/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net8.0/zh-Hans/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net8.0/zh-Hant/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net9.0/Microsoft.CodeAnalysis.Features.dll",
+        "lib/net9.0/Microsoft.CodeAnalysis.Features.pdb",
+        "lib/net9.0/Microsoft.CodeAnalysis.Features.xml",
+        "lib/net9.0/cs/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net9.0/de/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net9.0/es/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net9.0/fr/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net9.0/it/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net9.0/ja/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net9.0/ko/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net9.0/pl/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net9.0/pt-BR/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net9.0/ru/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net9.0/tr/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net9.0/zh-Hans/Microsoft.CodeAnalysis.Features.resources.dll",
+        "lib/net9.0/zh-Hant/Microsoft.CodeAnalysis.Features.resources.dll",
         "lib/netstandard2.0/Microsoft.CodeAnalysis.Features.dll",
         "lib/netstandard2.0/Microsoft.CodeAnalysis.Features.pdb",
         "lib/netstandard2.0/Microsoft.CodeAnalysis.Features.xml",
@@ -4619,7 +4703,7 @@
         "lib/netstandard2.0/tr/Microsoft.CodeAnalysis.Features.resources.dll",
         "lib/netstandard2.0/zh-Hans/Microsoft.CodeAnalysis.Features.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.CodeAnalysis.Features.resources.dll",
-        "microsoft.codeanalysis.features.4.8.0.nupkg.sha512",
+        "microsoft.codeanalysis.features.4.14.0.nupkg.sha512",
         "microsoft.codeanalysis.features.nuspec"
       ]
     },
@@ -4637,47 +4721,47 @@
         "microsoft.codeanalysis.razor.nuspec"
       ]
     },
-    "Microsoft.CodeAnalysis.Scripting.Common/4.8.0": {
-      "sha512": "ysiNNbAASVhV9wEd5oY2x99EwaVYtB13XZRjHsgWT/R1mQkxZF8jWsf7JWaZxD1+jNoz1QCQ6nbe+vr+6QvlFA==",
+    "Microsoft.CodeAnalysis.Scripting.Common/4.14.0": {
+      "sha512": "YRFoYZQU4VPlB+Xwwtj8gIHXxMyuhGXyj207IWHcsSNaJtW83My0FGv6jtN9gC/HkxgjdMYJORPjBwUx3+FVjQ==",
       "type": "package",
-      "path": "microsoft.codeanalysis.scripting.common/4.8.0",
+      "path": "microsoft.codeanalysis.scripting.common/4.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "ThirdPartyNotices.rtf",
-        "lib/net6.0/Microsoft.CodeAnalysis.Scripting.dll",
-        "lib/net6.0/Microsoft.CodeAnalysis.Scripting.pdb",
-        "lib/net6.0/Microsoft.CodeAnalysis.Scripting.xml",
-        "lib/net6.0/cs/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net6.0/de/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net6.0/es/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net6.0/fr/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net6.0/it/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net6.0/ja/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net6.0/ko/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net6.0/pl/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net6.0/pt-BR/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net6.0/ru/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net6.0/tr/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net6.0/zh-Hans/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net6.0/zh-Hant/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net7.0/Microsoft.CodeAnalysis.Scripting.dll",
-        "lib/net7.0/Microsoft.CodeAnalysis.Scripting.pdb",
-        "lib/net7.0/Microsoft.CodeAnalysis.Scripting.xml",
-        "lib/net7.0/cs/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net7.0/de/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net7.0/es/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net7.0/fr/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net7.0/it/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net7.0/ja/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net7.0/ko/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net7.0/pl/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net7.0/pt-BR/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net7.0/ru/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net7.0/tr/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net7.0/zh-Hans/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "lib/net7.0/zh-Hant/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net8.0/Microsoft.CodeAnalysis.Scripting.dll",
+        "lib/net8.0/Microsoft.CodeAnalysis.Scripting.pdb",
+        "lib/net8.0/Microsoft.CodeAnalysis.Scripting.xml",
+        "lib/net8.0/cs/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net8.0/de/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net8.0/es/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net8.0/fr/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net8.0/it/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net8.0/ja/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net8.0/ko/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net8.0/pl/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net8.0/pt-BR/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net8.0/ru/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net8.0/tr/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net8.0/zh-Hans/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net8.0/zh-Hant/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net9.0/Microsoft.CodeAnalysis.Scripting.dll",
+        "lib/net9.0/Microsoft.CodeAnalysis.Scripting.pdb",
+        "lib/net9.0/Microsoft.CodeAnalysis.Scripting.xml",
+        "lib/net9.0/cs/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net9.0/de/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net9.0/es/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net9.0/fr/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net9.0/it/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net9.0/ja/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net9.0/ko/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net9.0/pl/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net9.0/pt-BR/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net9.0/ru/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net9.0/tr/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net9.0/zh-Hans/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "lib/net9.0/zh-Hant/Microsoft.CodeAnalysis.Scripting.resources.dll",
         "lib/netstandard2.0/Microsoft.CodeAnalysis.Scripting.dll",
         "lib/netstandard2.0/Microsoft.CodeAnalysis.Scripting.pdb",
         "lib/netstandard2.0/Microsoft.CodeAnalysis.Scripting.xml",
@@ -4694,7 +4778,7 @@
         "lib/netstandard2.0/tr/Microsoft.CodeAnalysis.Scripting.resources.dll",
         "lib/netstandard2.0/zh-Hans/Microsoft.CodeAnalysis.Scripting.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "microsoft.codeanalysis.scripting.common.4.8.0.nupkg.sha512",
+        "microsoft.codeanalysis.scripting.common.4.14.0.nupkg.sha512",
         "microsoft.codeanalysis.scripting.common.nuspec"
       ]
     },
@@ -4901,18 +4985,18 @@
         "microsoft.diasymreader.nuspec"
       ]
     },
-    "Microsoft.DotNet.Scaffolding.Shared/9.0.0": {
-      "sha512": "9pfRsTzUANgI6J7nFjYip50ifcvmORjMmFByXmdYa//x8toziydhbg0cMylP1S2mRf4/96VKSAfpayYrO3m4Ww==",
+    "Microsoft.DotNet.Scaffolding.Shared/10.0.0": {
+      "sha512": "bvbhe5eZu8Ov2vxwNc8+XimXf0M2z79jrfCmtvTS77HRPnGC7dcGkHqdaJIHv1bmMHX+VJH1axlYmVwkF12JvA==",
       "type": "package",
-      "path": "microsoft.dotnet.scaffolding.shared/9.0.0",
+      "path": "microsoft.dotnet.scaffolding.shared/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "NOTICE.txt",
-        "lib/netstandard2.0/Microsoft.DotNet.Scaffolding.Shared.dll",
-        "lib/netstandard2.0/Microsoft.DotNet.Scaffolding.Shared.xml",
-        "microsoft.dotnet.scaffolding.shared.9.0.0.nupkg.sha512",
+        "lib/net9.0/Microsoft.DotNet.Scaffolding.Shared.dll",
+        "lib/net9.0/Microsoft.DotNet.Scaffolding.Shared.xml",
+        "microsoft.dotnet.scaffolding.shared.10.0.0.nupkg.sha512",
         "microsoft.dotnet.scaffolding.shared.nuspec"
       ]
     },
@@ -5021,17 +5105,17 @@
         "microsoft.entityframeworkcore.sqlite.core.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Tools/9.0.9": {
-      "sha512": "Q8n1PXXJApa1qX8HI3r/YuHoJ1HuLwjI2hLqaCV9K9pqQhGpi6Z38laOYwL2ElUOTWCxTKMDEMMYWfPlw6rwgg==",
+    "Microsoft.EntityFrameworkCore.Tools/10.0.0": {
+      "sha512": "Gx6AWCf1CsBHTbvVVWBYBKp6hrwZt0IgBigoBPaybwOBG2EFIfZc7NP2BoR6r56YuuikbPIzCuvQuFYNnX43+A==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.tools/9.0.9",
+      "path": "microsoft.entityframeworkcore.tools/10.0.0",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "docs/PACKAGE.md",
-        "microsoft.entityframeworkcore.tools.9.0.9.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.10.0.0.nupkg.sha512",
         "microsoft.entityframeworkcore.tools.nuspec",
         "tools/EntityFrameworkCore.PS2.psd1",
         "tools/EntityFrameworkCore.PS2.psm1",
@@ -5039,11 +5123,11 @@
         "tools/EntityFrameworkCore.psm1",
         "tools/about_EntityFrameworkCore.help.txt",
         "tools/init.ps1",
+        "tools/net10.0/any/ef.dll",
+        "tools/net10.0/any/ef.runtimeconfig.json",
         "tools/net472/any/ef.exe",
         "tools/net472/win-arm64/ef.exe",
-        "tools/net472/win-x86/ef.exe",
-        "tools/netcoreapp2.0/any/ef.dll",
-        "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
+        "tools/net472/win-x86/ef.exe"
       ]
     },
     "Microsoft.Extensions.DependencyModel/10.0.0": {
@@ -5075,10 +5159,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.FileProviders.Embedded/9.0.9": {
-      "sha512": "dDHoX03vqAG36RMjlk3H5TGuGYY6BF5hQvBmi/QuKW0i6U3F9gurMS7irfFtTzQupjmWSBhAkL/Rra922pUZcQ==",
+    "Microsoft.Extensions.FileProviders.Embedded/10.0.0": {
+      "sha512": "ECaTMB4NdV9W1es9J6tN0yoXRPUHKMi5+2L7hcVZ5k9zVdxccIx6+vMllwEYcdTaO0mCETEmdH4F0KxCqgnPaw==",
       "type": "package",
-      "path": "microsoft.extensions.fileproviders.embedded/9.0.9",
+      "path": "microsoft.extensions.fileproviders.embedded/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5087,13 +5171,13 @@
         "build/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.targets",
         "buildMultiTargeting/Microsoft.Extensions.FileProviders.Embedded.props",
         "buildMultiTargeting/Microsoft.Extensions.FileProviders.Embedded.targets",
+        "lib/net10.0/Microsoft.Extensions.FileProviders.Embedded.dll",
+        "lib/net10.0/Microsoft.Extensions.FileProviders.Embedded.xml",
         "lib/net462/Microsoft.Extensions.FileProviders.Embedded.dll",
         "lib/net462/Microsoft.Extensions.FileProviders.Embedded.xml",
-        "lib/net9.0/Microsoft.Extensions.FileProviders.Embedded.dll",
-        "lib/net9.0/Microsoft.Extensions.FileProviders.Embedded.xml",
         "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.dll",
         "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.xml",
-        "microsoft.extensions.fileproviders.embedded.9.0.9.nupkg.sha512",
+        "microsoft.extensions.fileproviders.embedded.10.0.0.nupkg.sha512",
         "microsoft.extensions.fileproviders.embedded.nuspec",
         "tasks/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.Manifest.Task.dll"
       ]
@@ -5127,58 +5211,58 @@
         "ref/netstandard2.0/Microsoft.NET.StringTools.xml"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration/9.0.0": {
-      "sha512": "W9ho78o/92MUDz04r7Al4dMx7djaqtSJE1cR7fMjy+Mm0StL5pVKXF24qnAFWJlip7KEpAa1QP35davXvuis9w==",
+    "Microsoft.VisualStudio.Web.CodeGeneration/10.0.0": {
+      "sha512": "g6lTQP0hlzeyts5REYJ8sYhU4m9iEk3rK1i9Kk4DHanio2EuUtRxJQDUljTOJdESGBE/iofECWozG7ucBSLjSQ==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration/9.0.0",
+      "path": "microsoft.visualstudio.web.codegeneration/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "NOTICE.txt",
         "README.md",
-        "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.dll",
-        "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.xml",
-        "microsoft.visualstudio.web.codegeneration.9.0.0.nupkg.sha512",
+        "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.dll",
+        "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.xml",
+        "microsoft.visualstudio.web.codegeneration.10.0.0.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Core/9.0.0": {
-      "sha512": "1VIEZs8DNnefMa0eVDZucz/dk28Sg0QRiNiRJj7SdU8E6UiNJxnkzA748aqA6Qqi8OMTHTBKhzx0Hj9ykIi6/Q==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Core/10.0.0": {
+      "sha512": "UeS+tMVowP7pPQC6kNUGm7bUoj9ojqyU0XIlsA1C0f24xN6iNs7h5btWAkCeQb9sl/RRmGWibKixL/r66ZSz2w==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.core/9.0.0",
+      "path": "microsoft.visualstudio.web.codegeneration.core/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "NOTICE.txt",
         "README.md",
-        "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll",
-        "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.xml",
-        "microsoft.visualstudio.web.codegeneration.core.9.0.0.nupkg.sha512",
+        "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll",
+        "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.xml",
+        "microsoft.visualstudio.web.codegeneration.core.10.0.0.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.core.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Design/9.0.0": {
-      "sha512": "nO5MUL3iC0WjtAVea5d4v6kVcoL9ae/PnkC6NeEJhWazHKdKj7xfv6D2QvBx8uCIj8FUu9QpvvdN6m/xMp//EQ==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Design/10.0.0": {
+      "sha512": "o/mBDSymoew2WfG1oOUtcy2k57YknJAudH4JRey0qcAj4fTm4+SkUBDhruWppGuwf0yeZuwzfkpDD2L6qbbjjw==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.design/9.0.0",
+      "path": "microsoft.visualstudio.web.codegeneration.design/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "NOTICE.txt",
         "README.md",
-        "lib/net8.0/dotnet-aspnet-codegenerator-design.dll",
-        "lib/net8.0/dotnet-aspnet-codegenerator-design.xml",
-        "microsoft.visualstudio.web.codegeneration.design.9.0.0.nupkg.sha512",
+        "lib/net10.0/dotnet-aspnet-codegenerator-design.dll",
+        "lib/net10.0/dotnet-aspnet-codegenerator-design.xml",
+        "microsoft.visualstudio.web.codegeneration.design.10.0.0.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.design.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/9.0.0": {
-      "sha512": "F4+A6CaXmof/QoeWpqaMMeoVinfUSIMKa5xLOrwsZxGfYl6Qryhb06bkJ8yJaF05WefMM/wnj73oI3Ms2bBh7g==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/10.0.0": {
+      "sha512": "taGJ3U1UnP5mjpB1h5+ktoXH2KJXEj/j8M+L+e5+P1dqeIt37n75ZO+HlE7YzpGwneETJwMfVtQBWkkOmtnXZA==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/9.0.0",
+      "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5186,49 +5270,49 @@
         "NOTICE.txt",
         "README.md",
         "Templates/DbContext/NewLocalDbContext.cshtml",
-        "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll",
-        "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.runtimeconfig.json",
-        "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.xml",
-        "microsoft.visualstudio.web.codegeneration.entityframeworkcore.9.0.0.nupkg.sha512",
+        "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll",
+        "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.runtimeconfig.json",
+        "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.xml",
+        "microsoft.visualstudio.web.codegeneration.entityframeworkcore.10.0.0.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Templating/9.0.0": {
-      "sha512": "euoX0M4JnbzSUcFXfDq+GSSdXNRbKGUBTK+8gcnzHmhY3sHgHn9bgeeZDp+LGuoUQaP+WrWA8Nq92gCTcZLWSA==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Templating/10.0.0": {
+      "sha512": "nxzPPd0kJOVixNdHrFfKzMjdy3emYdTWpFC/ZNXfZZHwiQ0o67fam1jGznBXOxshpB4X3GEWgLFogbH/Mi871A==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.templating/9.0.0",
+      "path": "microsoft.visualstudio.web.codegeneration.templating/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "NOTICE.txt",
         "README.md",
-        "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll",
-        "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.xml",
-        "microsoft.visualstudio.web.codegeneration.templating.9.0.0.nupkg.sha512",
+        "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll",
+        "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.xml",
+        "microsoft.visualstudio.web.codegeneration.templating.10.0.0.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.templating.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Utils/9.0.0": {
-      "sha512": "O8uehWLzgQhq3H2f+dxEkuYF8wWoBrT7iKtQXnHAc96qlVdLSARSxt3hlxqFSzK3ZkHp2P6lHt76LRH6J0PDrw==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Utils/10.0.0": {
+      "sha512": "M8aJ3bDRhRa5PvDR9CpaxB+3dY5+V157HVk/PP7dO+kQSD1eUbWq0Wh2uarpnQRSAm7hNacRpr4lIK5IdYMiVQ==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.utils/9.0.0",
+      "path": "microsoft.visualstudio.web.codegeneration.utils/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "NOTICE.txt",
         "README.md",
-        "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll",
-        "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.xml",
-        "microsoft.visualstudio.web.codegeneration.utils.9.0.0.nupkg.sha512",
+        "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll",
+        "lib/net10.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.xml",
+        "microsoft.visualstudio.web.codegeneration.utils.10.0.0.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.utils.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/9.0.0": {
-      "sha512": "WJhdsFXkpA0XR6PCjoxe9pRIqT8NV8Ggojv2cwaeCwxApzTAbLnglwADteeF7WlgHnr1VmJ+xdgzzNAAcJ9+Rg==",
+    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/10.0.0": {
+      "sha512": "4Kf+vJEM8Bj9s+4UPvFFwuXCVWcuUedVIofRqWCZMaFsCBbUmrKMMkH0AAO5fvkOfxB0F3swjpH8fxzgziybdw==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegenerators.mvc/9.0.0",
+      "path": "microsoft.visualstudio.web.codegenerators.mvc/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5248,11 +5332,12 @@
         "Templates/Blazor/Details.tt",
         "Templates/Blazor/Edit.tt",
         "Templates/Blazor/Index.tt",
+        "Templates/Blazor/NotFound.tt",
         "Templates/BlazorIdentity/IdentityComponentsEndpointRouteBuilderExtensions.tt",
         "Templates/BlazorIdentity/IdentityNoOpEmailSender.tt",
         "Templates/BlazorIdentity/IdentityRedirectManager.tt",
         "Templates/BlazorIdentity/IdentityRevalidatingAuthenticationStateProvider.tt",
-        "Templates/BlazorIdentity/IdentityUserAccessor.tt",
+        "Templates/BlazorIdentity/Pages/AccessDenied.tt",
         "Templates/BlazorIdentity/Pages/ConfirmEmail.tt",
         "Templates/BlazorIdentity/Pages/ConfirmEmailChange.tt",
         "Templates/BlazorIdentity/Pages/ExternalLogin.tt",
@@ -5272,7 +5357,9 @@
         "Templates/BlazorIdentity/Pages/Manage/ExternalLogins.tt",
         "Templates/BlazorIdentity/Pages/Manage/GenerateRecoveryCodes.tt",
         "Templates/BlazorIdentity/Pages/Manage/Index.tt",
+        "Templates/BlazorIdentity/Pages/Manage/Passkeys.tt",
         "Templates/BlazorIdentity/Pages/Manage/PersonalData.tt",
+        "Templates/BlazorIdentity/Pages/Manage/RenamePasskey.tt",
         "Templates/BlazorIdentity/Pages/Manage/ResetAuthenticator.tt",
         "Templates/BlazorIdentity/Pages/Manage/SetPassword.tt",
         "Templates/BlazorIdentity/Pages/Manage/TwoFactorAuthentication.tt",
@@ -5283,10 +5370,13 @@
         "Templates/BlazorIdentity/Pages/ResetPassword.tt",
         "Templates/BlazorIdentity/Pages/ResetPasswordConfirmation.tt",
         "Templates/BlazorIdentity/Pages/_Imports.tt",
-        "Templates/BlazorIdentity/Shared/AccountLayout.tt",
+        "Templates/BlazorIdentity/PasskeyInputModel.tt",
+        "Templates/BlazorIdentity/PasskeyOperation.tt",
         "Templates/BlazorIdentity/Shared/ExternalLoginPicker.tt",
         "Templates/BlazorIdentity/Shared/ManageLayout.tt",
         "Templates/BlazorIdentity/Shared/ManageNavMenu.tt",
+        "Templates/BlazorIdentity/Shared/PasskeySubmit.razor.js",
+        "Templates/BlazorIdentity/Shared/PasskeySubmit.tt",
         "Templates/BlazorIdentity/Shared/RedirectToLogin.tt",
         "Templates/BlazorIdentity/Shared/ShowRecoveryCodes.tt",
         "Templates/BlazorIdentity/Shared/StatusMessage.tt",
@@ -5613,15 +5703,15 @@
         "Templates/ViewGenerator_Versioned/Bootstrap4/Empty.cshtml",
         "Templates/ViewGenerator_Versioned/Bootstrap4/List.cshtml",
         "Templates/ViewGenerator_Versioned/Bootstrap4/_ValidationScriptsPartial.cshtml",
-        "lib/net8.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll",
-        "lib/net8.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.xml",
-        "lib/net8.0/blazorIdentityChanges.json",
-        "lib/net8.0/blazorWebCrudChanges.json",
-        "lib/net8.0/bootstrap4_identitygeneratorfilesconfig.json",
-        "lib/net8.0/bootstrap5_identitygeneratorfilesconfig.json",
-        "lib/net8.0/identityMinimalHostingChanges.json",
-        "lib/net8.0/minimalApiChanges.json",
-        "microsoft.visualstudio.web.codegenerators.mvc.9.0.0.nupkg.sha512",
+        "lib/net10.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll",
+        "lib/net10.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.xml",
+        "lib/net10.0/blazorIdentityChanges.json",
+        "lib/net10.0/blazorWebCrudChanges.json",
+        "lib/net10.0/bootstrap4_identitygeneratorfilesconfig.json",
+        "lib/net10.0/bootstrap5_identitygeneratorfilesconfig.json",
+        "lib/net10.0/identityMinimalHostingChanges.json",
+        "lib/net10.0/minimalApiChanges.json",
+        "microsoft.visualstudio.web.codegenerators.mvc.10.0.0.nupkg.sha512",
         "microsoft.visualstudio.web.codegenerators.mvc.nuspec"
       ]
     },
@@ -5672,142 +5762,164 @@
         "packageIcon.png"
       ]
     },
-    "NuGet.Common/6.11.0": {
-      "sha512": "T3bCiKUSx8wdYpcqr6Dbx93zAqFp689ee/oa1tH22XI/xl7EUzQ7No/WlE1FUqvEX1+Mqar3wRNAn2O/yxo94g==",
+    "NuGet.Common/6.12.1": {
+      "sha512": "nk8nTdhQl4x2VaAQUvefI7DDYAuBDlE+OZZRffm50Qx5dUAEq8wkc5JIqrN2lTEohObHPI/SXyG2UFdMQkrdyg==",
       "type": "package",
-      "path": "nuget.common/6.11.0",
+      "path": "nuget.common/6.12.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "icon.png",
         "lib/net472/NuGet.Common.dll",
+        "lib/net472/NuGet.Common.xml",
         "lib/netstandard2.0/NuGet.Common.dll",
-        "nuget.common.6.11.0.nupkg.sha512",
+        "lib/netstandard2.0/NuGet.Common.xml",
+        "nuget.common.6.12.1.nupkg.sha512",
         "nuget.common.nuspec"
       ]
     },
-    "NuGet.Configuration/6.11.0": {
-      "sha512": "73QprQqmumFrv3Ooi4YWpRYeBj8jZy9gNdOaOCp4pPInpt41SJJAz/aP4je+StwIJvi5HsgPPecLKekDIQEwKg==",
+    "NuGet.Configuration/6.12.1": {
+      "sha512": "IRwlY1379ZgJ0oEJvjD+lDuOhJ5S1fsU5n/bEC5/i0+N9bo2WIMDAdaQ/qIdyK/gMJ/YWS+++GSX6rN7luqEvg==",
       "type": "package",
-      "path": "nuget.configuration/6.11.0",
+      "path": "nuget.configuration/6.12.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "icon.png",
         "lib/net472/NuGet.Configuration.dll",
+        "lib/net472/NuGet.Configuration.xml",
         "lib/netstandard2.0/NuGet.Configuration.dll",
-        "nuget.configuration.6.11.0.nupkg.sha512",
+        "lib/netstandard2.0/NuGet.Configuration.xml",
+        "nuget.configuration.6.12.1.nupkg.sha512",
         "nuget.configuration.nuspec"
       ]
     },
-    "NuGet.DependencyResolver.Core/6.11.0": {
-      "sha512": "SoiPKPooA+IF+iCsX1ykwi3M0e+yBL34QnwIP3ujhQEn1dhlP/N1XsYAnKkJPxV15EZCahuuS4HtnBsZx+CHKA==",
+    "NuGet.DependencyResolver.Core/6.12.1": {
+      "sha512": "Nn4+pXW1qxGcq0OEQBJBh/FjKvWhzD49+kRzuOC9SkRZOrHsTaA12EsQ1mEE4rMUfqviaosmPEtvodJ4eKCmIw==",
       "type": "package",
-      "path": "nuget.dependencyresolver.core/6.11.0",
+      "path": "nuget.dependencyresolver.core/6.12.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "icon.png",
         "lib/net472/NuGet.DependencyResolver.Core.dll",
+        "lib/net472/NuGet.DependencyResolver.Core.xml",
         "lib/net5.0/NuGet.DependencyResolver.Core.dll",
+        "lib/net5.0/NuGet.DependencyResolver.Core.xml",
         "lib/netstandard2.0/NuGet.DependencyResolver.Core.dll",
-        "nuget.dependencyresolver.core.6.11.0.nupkg.sha512",
+        "lib/netstandard2.0/NuGet.DependencyResolver.Core.xml",
+        "nuget.dependencyresolver.core.6.12.1.nupkg.sha512",
         "nuget.dependencyresolver.core.nuspec"
       ]
     },
-    "NuGet.Frameworks/6.11.0": {
-      "sha512": "Ew/mrfmLF5phsprysHbph2+tdZ10HMHAURavsr/Kx1WhybDG4vmGuoNLbbZMZOqnPRdpyCTc42OKWLoedxpYtA==",
+    "NuGet.Frameworks/6.12.1": {
+      "sha512": "kPaRD5RJC0ByUg+yGX6bDz5XHMI7OYmQwP8kbtef+vZ+csj/VDb5Bwas4ChxwhoAbI8lEvwP5/3aViQPpgNBow==",
       "type": "package",
-      "path": "nuget.frameworks/6.11.0",
+      "path": "nuget.frameworks/6.12.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "icon.png",
         "lib/net472/NuGet.Frameworks.dll",
+        "lib/net472/NuGet.Frameworks.xml",
         "lib/netstandard2.0/NuGet.Frameworks.dll",
-        "nuget.frameworks.6.11.0.nupkg.sha512",
+        "lib/netstandard2.0/NuGet.Frameworks.xml",
+        "nuget.frameworks.6.12.1.nupkg.sha512",
         "nuget.frameworks.nuspec"
       ]
     },
-    "NuGet.LibraryModel/6.11.0": {
-      "sha512": "KUV2eeMICMb24OPcICn/wgncNzt6+W+lmFVO5eorTdo1qV4WXxYGyG1NTPiCY+Nrv5H/Ilnv9UaUM2ozqSmnjw==",
+    "NuGet.LibraryModel/6.12.1": {
+      "sha512": "IqX7Ze7qSbhx22lsdnMbLJpcqrmwGyQbyNk9JSsZ/u5p6PIaZyeWsvHHy+oXU8fuRmmKfHBnZEsceaCAw6Xy5A==",
       "type": "package",
-      "path": "nuget.librarymodel/6.11.0",
+      "path": "nuget.librarymodel/6.12.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "icon.png",
         "lib/net472/NuGet.LibraryModel.dll",
+        "lib/net472/NuGet.LibraryModel.xml",
         "lib/netstandard2.0/NuGet.LibraryModel.dll",
-        "nuget.librarymodel.6.11.0.nupkg.sha512",
+        "lib/netstandard2.0/NuGet.LibraryModel.xml",
+        "nuget.librarymodel.6.12.1.nupkg.sha512",
         "nuget.librarymodel.nuspec"
       ]
     },
-    "NuGet.Packaging/6.11.0": {
-      "sha512": "VmUv2LedVuPY1tfNybORO2I9IuqOzeV7I5JBD+PwNvJq2bAqovi4FCw2cYI0g+kjOJXBN2lAJfrfnqtUOlVJdQ==",
+    "NuGet.Packaging/6.12.1": {
+      "sha512": "6s5NO3VNX6fIx6GwuWZtIsal9W1xkelYd3Vg2KUAg1zGqnKC3wB5IZlombvVGVGcwyl/A+iDvpUwSvgeDoB3wA==",
       "type": "package",
-      "path": "nuget.packaging/6.11.0",
+      "path": "nuget.packaging/6.12.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "icon.png",
         "lib/net472/NuGet.Packaging.dll",
+        "lib/net472/NuGet.Packaging.xml",
         "lib/net5.0/NuGet.Packaging.dll",
+        "lib/net5.0/NuGet.Packaging.xml",
         "lib/netstandard2.0/NuGet.Packaging.dll",
-        "nuget.packaging.6.11.0.nupkg.sha512",
+        "lib/netstandard2.0/NuGet.Packaging.xml",
+        "nuget.packaging.6.12.1.nupkg.sha512",
         "nuget.packaging.nuspec"
       ]
     },
-    "NuGet.ProjectModel/6.11.0": {
-      "sha512": "g0KtmDH6fas97WsN73yV2h1F5JT9o6+Y0wlPK+ij9YLKaAXaF6+1HkSaQMMJ+xh9/jCJG9G6nau6InOlb1g48g==",
+    "NuGet.ProjectModel/6.12.1": {
+      "sha512": "nzpVqooG0qumADw5t8YMg9e+ezVqUhhoGvoihVmu5O9gJDqzkRYswQzyIVsE24dirBQabW0X0Sv53f6ZLJCv+g==",
       "type": "package",
-      "path": "nuget.projectmodel/6.11.0",
+      "path": "nuget.projectmodel/6.12.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "icon.png",
         "lib/net472/NuGet.ProjectModel.dll",
+        "lib/net472/NuGet.ProjectModel.xml",
         "lib/net5.0/NuGet.ProjectModel.dll",
+        "lib/net5.0/NuGet.ProjectModel.xml",
         "lib/netstandard2.0/NuGet.ProjectModel.dll",
-        "nuget.projectmodel.6.11.0.nupkg.sha512",
+        "lib/netstandard2.0/NuGet.ProjectModel.xml",
+        "nuget.projectmodel.6.12.1.nupkg.sha512",
         "nuget.projectmodel.nuspec"
       ]
     },
-    "NuGet.Protocol/6.11.0": {
-      "sha512": "p5B8oNLLnGhUfMbcS16aRiegj11pD6k+LELyRBqvNFR/pE3yR1XT+g1XS33ME9wvoU+xbCGnl4Grztt1jHPinw==",
+    "NuGet.Protocol/6.12.1": {
+      "sha512": "VBN7OtG/Y9Rnj1WT3G8X88ZHu5Pq+yzca5Z6OI/FWXcENVAQkUl0ml6Cv8ghOqYyiuvnObGDV9oWLD/bIuVtDw==",
       "type": "package",
-      "path": "nuget.protocol/6.11.0",
+      "path": "nuget.protocol/6.12.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "icon.png",
         "lib/net472/NuGet.Protocol.dll",
+        "lib/net472/NuGet.Protocol.xml",
         "lib/net5.0/NuGet.Protocol.dll",
+        "lib/net5.0/NuGet.Protocol.xml",
         "lib/netstandard2.0/NuGet.Protocol.dll",
-        "nuget.protocol.6.11.0.nupkg.sha512",
+        "lib/netstandard2.0/NuGet.Protocol.xml",
+        "nuget.protocol.6.12.1.nupkg.sha512",
         "nuget.protocol.nuspec"
       ]
     },
-    "NuGet.Versioning/6.11.0": {
-      "sha512": "v/GGlIj2dd7svplFmASWEueu62veKW0MrMtBaZ7QG8aJTSGv2yE+pgUGhXRcQ4nxNOEq/wLBrz1vkth/1SND7A==",
+    "NuGet.Versioning/6.12.1": {
+      "sha512": "fJ6rFYANDnohFsdpaY79FvrJxI6murmoOxXz6nZlf819F48+IBKMnAIg3oIBRtZq5y498ObMtKnro5IitvizUg==",
       "type": "package",
-      "path": "nuget.versioning/6.11.0",
+      "path": "nuget.versioning/6.12.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "icon.png",
         "lib/net472/NuGet.Versioning.dll",
+        "lib/net472/NuGet.Versioning.xml",
         "lib/netstandard2.0/NuGet.Versioning.dll",
-        "nuget.versioning.6.11.0.nupkg.sha512",
+        "lib/netstandard2.0/NuGet.Versioning.xml",
+        "nuget.versioning.6.12.1.nupkg.sha512",
         "nuget.versioning.nuspec"
       ]
     },
@@ -6261,10 +6373,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Security.Cryptography.ProtectedData/9.0.0": {
-      "sha512": "CJW+x/F6fmRQ7N6K8paasTw9PDZp4t7G76UjGNlSDgoHPF0h08vTzLYbLZpOLEJSg35d5wy2jCXGo84EN05DpQ==",
+    "System.Security.Cryptography.ProtectedData/9.0.6": {
+      "sha512": "yErfw/3pZkJE/VKza/Cm5idTpIKOy/vsmVi59Ta5SruPVtubzxb8CtnE8tyUpzs5pr0Y28GUFfSVzAhCLN3F/Q==",
       "type": "package",
-      "path": "system.security.cryptography.protecteddata/9.0.0",
+      "path": "system.security.cryptography.protecteddata/9.0.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6290,7 +6402,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "system.security.cryptography.protecteddata.9.0.0.nupkg.sha512",
+        "system.security.cryptography.protecteddata.9.0.6.nupkg.sha512",
         "system.security.cryptography.protecteddata.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -6349,13 +6461,13 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 9.0.9",
-      "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 9.0.9",
-      "Microsoft.AspNetCore.Identity.UI >= 9.0.9",
+      "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 10.0.0",
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 10.0.0",
+      "Microsoft.AspNetCore.Identity.UI >= 10.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 10.0.0",
       "Microsoft.EntityFrameworkCore.Sqlite >= 10.0.0",
-      "Microsoft.EntityFrameworkCore.Tools >= 9.0.9",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 9.0.0"
+      "Microsoft.EntityFrameworkCore.Tools >= 10.0.0",
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 10.0.0"
     ]
   },
   "packageFolders": {
@@ -6403,15 +6515,15 @@
         "dependencies": {
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",
-            "version": "[9.0.9, )"
+            "version": "[10.0.0, )"
           },
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",
-            "version": "[9.0.9, )"
+            "version": "[10.0.0, )"
           },
           "Microsoft.AspNetCore.Identity.UI": {
             "target": "Package",
-            "version": "[9.0.9, )"
+            "version": "[10.0.0, )"
           },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -6425,11 +6537,11 @@
           },
           "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
-            "version": "[9.0.9, )"
+            "version": "[10.0.0, )"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
-            "version": "[9.0.0, )"
+            "version": "[10.0.0, )"
           }
         },
         "imports": [
@@ -6868,87 +6980,5 @@
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.CSharp.Features 4.8.0 requires Microsoft.CodeAnalysis.Common (= 4.8.0) but version Microsoft.CodeAnalysis.Common 4.14.0 was resolved.",
-      "libraryId": "Microsoft.CodeAnalysis.Common",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    },
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.CSharp.Features 4.8.0 requires Microsoft.CodeAnalysis.CSharp (= 4.8.0) but version Microsoft.CodeAnalysis.CSharp 4.14.0 was resolved.",
-      "libraryId": "Microsoft.CodeAnalysis.CSharp",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    },
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.CSharp.Features 4.8.0 requires Microsoft.CodeAnalysis.Workspaces.Common (= 4.8.0) but version Microsoft.CodeAnalysis.Workspaces.Common 4.14.0 was resolved.",
-      "libraryId": "Microsoft.CodeAnalysis.Workspaces.Common",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    },
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.CSharp.Features 4.8.0 requires Microsoft.CodeAnalysis.CSharp.Workspaces (= 4.8.0) but version Microsoft.CodeAnalysis.CSharp.Workspaces 4.14.0 was resolved.",
-      "libraryId": "Microsoft.CodeAnalysis.CSharp.Workspaces",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    },
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.Features 4.8.0 requires Microsoft.CodeAnalysis.Common (= 4.8.0) but version Microsoft.CodeAnalysis.Common 4.14.0 was resolved.",
-      "libraryId": "Microsoft.CodeAnalysis.Common",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    },
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.Features 4.8.0 requires Microsoft.CodeAnalysis.Workspaces.Common (= 4.8.0) but version Microsoft.CodeAnalysis.Workspaces.Common 4.14.0 was resolved.",
-      "libraryId": "Microsoft.CodeAnalysis.Workspaces.Common",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    },
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.Scripting.Common 4.8.0 requires Microsoft.CodeAnalysis.Common (= 4.8.0) but version Microsoft.CodeAnalysis.Common 4.14.0 was resolved.",
-      "libraryId": "Microsoft.CodeAnalysis.Common",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.Build' 17.10.4 has a known high severity vulnerability, https://github.com/advisories/GHSA-w3q9-fxm7-j8fq",
-      "libraryId": "Microsoft.Build",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    }
-  ]
+  }
 }

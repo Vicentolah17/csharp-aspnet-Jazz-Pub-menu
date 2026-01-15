@@ -1,5 +1,4 @@
 <div class="container">
-  <!-- header -->
   <header class="header">
     <h1 class="title">
       <span class="music-note">♪</span> The Velvet Note
@@ -7,7 +6,6 @@
     <p class="subtitle">Premium Whiskey Collection</p>
   </header>
 
-  <!-- main -->
   <main class="main-content">
     <div class="section-header">
       <div>
@@ -19,152 +17,114 @@
       </button>
     </div>
 
-    <!-- FORMULÁRIO ADICIONAR -->
     <div *ngIf="mostrarFormulario && !modoEdicao" class="form-container">
       <div class="form-header">
-        <h3>Novo Premium</h3>
+        <h3>Novo Whiskey</h3>
         <button class="btn-close" (click)="fecharFormulario()">✕</button>
       </div>
       
       <form (ngSubmit)="onSubmit()" class="premium-form">
         <div class="form-group">
-          <label for="title">Título *</label>
-          <input 
-            type="text" 
-            id="title" 
-            [(ngModel)]="novoPremium.title"
-            name="title"
-            placeholder="Ex: Whiskey Bourbon - Jack Daniels"
-            required>
+          <label for="title">Rótulo *</label>
+          <input type="text" id="title" [(ngModel)]="novoPremium.title" name="title" placeholder="Ex: Jack Daniels Single Barrel" required>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label for="startDate">Data Início *</label>
-            <input 
-              type="datetime-local" 
-              id="startDate" 
-              [(ngModel)]="novoPremium.startDate"
-              name="startDate"
-              required>
+            <label for="type">Tipo *</label>
+            <input type="text" id="type" [(ngModel)]="novoPremium.type" name="type" placeholder="Ex: Bourbon" required>
           </div>
-
           <div class="form-group">
-            <label for="endDate">Data Fim *</label>
-            <input 
-              type="datetime-local" 
-              id="endDate" 
-              [(ngModel)]="novoPremium.endDate"
-              name="endDate"
-              required>
+            <label for="origin">Origem *</label>
+            <input type="text" id="origin" [(ngModel)]="novoPremium.origin" name="origin" placeholder="Ex: Kentucky, USA" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="age">Idade (Anos) *</label>
+            <input type="number" id="age" [(ngModel)]="novoPremium.age" name="age" required>
+          </div>
+          <div class="form-group">
+            <label for="price">Preço (R$) *</label>
+            <input type="number" id="price" [(ngModel)]="novoPremium.price" name="price" step="0.01" required>
           </div>
         </div>
 
         <div class="form-group">
-          <label for="clientId">ID do Cliente *</label>
-          <input 
-            type="number" 
-            id="clientId" 
-            [(ngModel)]="novoPremium.clientId"
-            name="clientId"
-            placeholder="1"
-            required>
+          <label for="description">Descrição</label>
+          <textarea id="description" [(ngModel)]="novoPremium.description" name="description" placeholder="Notas de sabor, aroma..."></textarea>
         </div>
 
         <div class="form-actions">
-          <button type="button" class="btn-cancel" (click)="fecharFormulario()">
-            Cancelar
-          </button>
-          <button type="submit" class="btn-submit">
-            Adicionar
-          </button>
+          <button type="button" class="btn-cancel" (click)="fecharFormulario()">Cancelar</button>
+          <button type="submit" class="btn-submit">Adicionar ao Cardápio</button>
         </div>
       </form>
     </div>
 
-    <!-- FORMULÁRIO EDITAR -->
     <div *ngIf="mostrarFormulario && modoEdicao && premiumParaEditar" class="form-container">
       <div class="form-header">
-        <h3>Editar Premium</h3>
+        <h3>Editar Whiskey</h3>
         <button class="btn-close" (click)="fecharFormulario()">✕</button>
       </div>
       
       <form (ngSubmit)="onUpdate()" class="premium-form">
         <div class="form-group">
-          <label for="titleEdit">Título *</label>
-          <input 
-            type="text" 
-            id="titleEdit" 
-            [(ngModel)]="premiumParaEditar.title"
-            name="titleEdit"
-            placeholder="Ex: Whiskey Bourbon - Jack Daniels"
-            required>
+          <label for="titleEdit">Rótulo *</label>
+          <input type="text" id="titleEdit" [(ngModel)]="premiumParaEditar.title" name="titleEdit" required>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label for="startDateEdit">Data Início *</label>
-            <input 
-              type="datetime-local" 
-              id="startDateEdit" 
-              [(ngModel)]="premiumParaEditar.startDate"
-              name="startDateEdit"
-              required>
+            <label for="typeEdit">Tipo *</label>
+            <input type="text" id="typeEdit" [(ngModel)]="premiumParaEditar.type" name="typeEdit" required>
           </div>
-
           <div class="form-group">
-            <label for="endDateEdit">Data Fim *</label>
-            <input 
-              type="datetime-local" 
-              id="endDateEdit" 
-              [(ngModel)]="premiumParaEditar.endDate"
-              name="endDateEdit"
-              required>
+            <label for="originEdit">Origem *</label>
+            <input type="text" id="originEdit" [(ngModel)]="premiumParaEditar.origin" name="originEdit" required>
           </div>
         </div>
 
-        <div class="form-group">
-          <label for="clientIdEdit">ID do Cliente *</label>
-          <input 
-            type="number" 
-            id="clientIdEdit" 
-            [(ngModel)]="premiumParaEditar.clientId"
-            name="clientIdEdit"
-            placeholder="1"
-            required>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ageEdit">Idade (Anos) *</label>
+            <input type="number" id="ageEdit" [(ngModel)]="premiumParaEditar.age" name="ageEdit" required>
+          </div>
+          <div class="form-group">
+            <label for="priceEdit">Preço *</label>
+            <input type="number" id="priceEdit" [(ngModel)]="premiumParaEditar.price" name="priceEdit" step="0.01" required>
+          </div>
         </div>
 
         <div class="form-actions">
-          <button type="button" class="btn-cancel" (click)="fecharFormulario()">
-            Cancelar
-          </button>
-          <button type="submit" class="btn-submit">
-            Atualizar
-          </button>
+          <button type="button" class="btn-cancel" (click)="fecharFormulario()">Cancelar</button>
+          <button type="submit" class="btn-submit">Atualizar</button>
         </div>
       </form>
     </div>
 
-    <!-- tabela whiskey -->
     <div class="table-container">
       <table class="whiskey-table">
         <thead>
           <tr>
-            <th>Nome</th>
-            <th>Cliente</th>
-            <th>Email</th>
-            <th>Data Início</th>
-            <th>Data Fim</th>
+            <th>Rótulo</th>
+            <th>Tipo</th>
+            <th>Origem</th>
+            <th>Idade</th>
+            <th>Preço</th>
+            <th>Descrição</th>
             <th>Ações</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let whiskey of whiskeys">
             <td class="whiskey-name">{{ whiskey.title }}</td>
-            <td>{{ whiskey.client?.name || 'N/A' }}</td>
-            <td class="whiskey-email">{{ whiskey.client?.email || 'N/A' }}</td>
-            <td class="whiskey-date">{{ whiskey.startDate | date:'dd/MM/yyyy HH:mm' }}</td>
-            <td class="whiskey-date">{{ whiskey.endDate | date:'dd/MM/yyyy HH:mm' }}</td>
+            <td>{{ whiskey.type }}</td>
+            <td>{{ whiskey.origin }}</td>
+            <td>{{ whiskey.age }} anos</td>
+            <td class="whiskey-price">{{ whiskey.price | currency:'BRL' }}</td>
+            <td class="whiskey-description" title="{{ whiskey.description }}">{{ whiskey.description }}</td>
             <td class="actions">
               <button class="btn-icon btn-edit" (click)="editarWhiskey(whiskey)" title="Editar">
                 <span>✏️</span>
@@ -177,7 +137,6 @@
         </tbody>
       </table>
 
-      <!--msg empty -->
       <div *ngIf="whiskeys.length === 0" class="empty-state">
         <p>Nenhum premium cadastrado ainda.</p>
         <button class="btn-add" (click)="abrirFormularioAdicionar()">
@@ -187,7 +146,6 @@
     </div>
   </main>
 
-  <!-- foot -->
   <footer class="footer">
     <p class="quote">"A música é a alma do whiskey, e o whiskey é a alma da música"</p>
     <a href="#" class="live-jazz">

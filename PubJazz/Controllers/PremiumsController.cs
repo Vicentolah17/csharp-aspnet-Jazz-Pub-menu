@@ -5,13 +5,12 @@ using PubJazz.Models;
 
 namespace PubJazz.Controllers
 {
-    [ApiController] // <-- Isso diz que é uma API Controller
-    [Route("api/[controller]")] // <-- Isso define a URL: /api/Premiums
+    [ApiController]
+    [Route("api/[controller]")]
     public class PremiumsController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
 
-        // Injeção de dependência (igual nas Razor Pages)
         public PremiumsController(ApplicationDbContext context)
         {
             _context = context;
@@ -21,12 +20,8 @@ namespace PubJazz.Controllers
         [HttpGet]
         public async Task<IActionResult> GetPremiums()
         {
-            // Busca todos os premiums (incluindo o Cliente relacionado)
-            var premiums = await _context.Premiums
-                                         .Include(p => p.Client) // Opcional, mas bom
-                                         .ToListAsync();
-            
-            // Retorna um JSON com a lista
+            // Removido .Include(p => p.Client) - Erros 26 e 38 morrem aqui
+            var premiums = await _context.Premiums.ToListAsync();
             return Ok(premiums); 
         }
 
@@ -34,9 +29,7 @@ namespace PubJazz.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPremium(int id)
         {
-            var premium = await _context.Premiums
-                                        .Include(p => p.Client)
-                                        .FirstOrDefaultAsync(p => p.Id == id);
+            var premium = await _context.Premiums.FindAsync(id);
 
             if (premium == null)
             {
@@ -49,20 +42,14 @@ namespace PubJazz.Controllers
         [HttpPost]
         public async Task<IActionResult> PostPremium([FromBody] Premium premium)
         {
-
-
-
-            premium.StartDate = DateTime.Now;
-            premium.EndDate = DateTime.Now.AddDays(7);
-
+            // Removidas as linhas de StartDate/EndDate - Erros 55 e 56 morrem aqui
             _context.Premiums.Add(premium);
             await _context.SaveChangesAsync();
-
 
             return CreatedAtAction(nameof(GetPremium), new { id = premium.Id }, premium);
         }
 
-        // DELETE: /api/Premiums/
+        // DELETE: /api/Premiums/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePremium(int id)
         {
@@ -78,28 +65,28 @@ namespace PubJazz.Controllers
             return NoContent();
         }
         
-        // PUT: /api/Premiums/
+        // PUT: /api/Premiums/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPremium(int id, [FromBody] Premium premium)
         {
-            
-
             if (id != premium.Id)
             {
-                
-                return BadRequest("ID do objeto não confere com o ID da URL.");
+                return BadRequest("ID não confere.");
             }
 
-            
             var premiumOriginal = await _context.Premiums.FindAsync(id);
             if (premiumOriginal == null)
             {
-                return NotFound("Premium não encontrado.");
+                return NotFound();
             }
 
-            
+            // Atualizando com os novos campos do cardápio
             premiumOriginal.Title = premium.Title;
-            
+            premiumOriginal.Type = premium.Type;
+            premiumOriginal.Origin = premium.Origin;
+            premiumOriginal.Age = premium.Age;
+            premiumOriginal.Price = premium.Price;
+            premiumOriginal.Description = premium.Description;
 
             try
             {
@@ -108,15 +95,8 @@ namespace PubJazz.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                
-                if (!_context.Premiums.Any(e => e.Id == id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                if (!_context.Premiums.Any(e => e.Id == id)) return NotFound();
+                else throw;
             }
 
             return NoContent(); 

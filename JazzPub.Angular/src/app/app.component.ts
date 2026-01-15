@@ -15,16 +15,18 @@ import { PremiumService, Premium } from './services/premium.service';
 export class AppComponent implements OnInit {
   public whiskeys: Premium[] = [];
   
+  // ATUALIZADO: Agora com os campos do cardápio
   public novoPremium: any = {
     title: '',
-    startDate: '',
-    endDate: '',
-    clientId: 1
+    type: '',
+    origin: '',
+    age: 0,
+    price: 0,
+    description: ''
   };
 
   public premiumParaEditar: Premium | null = null;
   
-  // Controle do formulário
   public mostrarFormulario: boolean = false;
   public modoEdicao: boolean = false;
 
@@ -44,52 +46,37 @@ export class AppComponent implements OnInit {
     this.premiumService.getPremiums().subscribe(
       (data: Premium[]) => {
         this.whiskeys = data;
-        console.log('Dados carregados!', this.whiskeys);
+        console.log('Cardápio carregado!', this.whiskeys);
       },
-      (erro) => {
-        console.error('Erro ao buscar premiums:', erro);
-      }
+      (erro) => console.error('Erro ao buscar whiskeys:', erro)
     );
   }
 
   public onSubmit(): void {
-    console.log('Enviando premium:', this.novoPremium);
+    console.log('Enviando novo whiskey:', this.novoPremium);
     
     this.premiumService.addPremium(this.novoPremium).subscribe(
-      (premiumCriado: Premium) => {
-        console.log('Premium criado:', premiumCriado);
-        this.whiskeys.push(premiumCriado);
-        
-        // Limpar formulário e fechar
-        this.novoPremium = {
-          title: '',
-          startDate: '',
-          endDate: '',
-          clientId: 1
-        };
-        this.fecharFormulario();
-        
-        // Recarregar para pegar dados atualizados do servidor
+      (whiskeyCriado: Premium) => {
+        console.log('Whiskey adicionado ao cardápio:', whiskeyCriado);
+        this.whiskeys.push(whiskeyCriado);
+        this.fecharFormulario(); // Já limpa o objeto internamente
         this.carregarPremiums();
       },
       (erro) => {
-        console.error('Erro ao criar premium:', erro);
-        alert('Erro ao criar premium. Verifique o console.');
+        console.error('Erro ao adicionar whiskey:', erro);
+        alert('Erro ao salvar. Verifique se o Backend está rodando.');
       }
     );
   }
 
   public deletarWhiskey(whiskey: Premium): void {
-    if (confirm(`Tem certeza que deseja deletar ${whiskey.title}?`)) {
+    if (confirm(`Remover ${whiskey.title} do cardápio?`)) {
       this.premiumService.deletePremium(whiskey.id).subscribe(
         () => {
-          console.log('Premium deletado com sucesso!');
           this.whiskeys = this.whiskeys.filter(w => w.id !== whiskey.id);
+          console.log('Removido com sucesso');
         },
-        (erro) => {
-          console.error('Erro ao deletar premium:', erro);
-          alert('Erro ao deletar premium. Verifique o console.');
-        }
+        (erro) => console.error('Erro ao deletar:', erro)
       );
     }
   }
@@ -98,29 +85,17 @@ export class AppComponent implements OnInit {
     this.premiumParaEditar = { ...whiskey };
     this.modoEdicao = true;
     this.mostrarFormulario = true;
-    console.log('Editando whiskey:', whiskey);
   }
 
   public onUpdate(): void {
     if (this.premiumParaEditar) {
       this.premiumService.updatePremium(this.premiumParaEditar.id, this.premiumParaEditar).subscribe(
         () => {
-          console.log('Premium atualizado!');
-          
-          const index = this.whiskeys.findIndex(w => w.id === this.premiumParaEditar!.id);
-          if (index !== -1) {
-            this.whiskeys[index] = this.premiumParaEditar!;
-          }
-          
+          console.log('Dados atualizados!');
           this.fecharFormulario();
-          
-          // Recarregar para pegar dados atualizados do servidor
           this.carregarPremiums();
         },
-        (erro) => {
-          console.error('Erro ao atualizar premium:', erro);
-          alert('Erro ao atualizar premium. Verifique o console.');
-        }
+        (erro) => console.error('Erro ao atualizar:', erro)
       );
     }
   }
@@ -130,12 +105,14 @@ export class AppComponent implements OnInit {
     this.modoEdicao = false;
     this.premiumParaEditar = null;
     
-    // Limpar formulário
+    // ATUALIZADO: Limpa o formulário com a estrutura nova
     this.novoPremium = {
       title: '',
-      startDate: '',
-      endDate: '',
-      clientId: 1
+      type: '',
+      origin: '',
+      age: 0,
+      price: 0,
+      description: ''
     };
   }
 }
